@@ -42,7 +42,7 @@ Official website of the "Why Not Linux" event
 
 3 - Run the command `npm install`
 
-4 - Run the command `npm start`
+4 - Run the command `npm run dev`
 
 5 - Open your browser and go to `http://localhost:3000`
 
