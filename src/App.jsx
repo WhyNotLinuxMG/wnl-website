@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React from 'react'
+import ButtonFill from './components/ButtonFill'
+import Conference from './components/Conference'
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section className='bg-background'>
+      <div className='max-w-[1700px] mx-auto pt-5'>
+        <div className='flex flex-col items-center justify-center '>
+          <h2 className='font-kontes uppercase text-white text-center text-[38px] md:text-[58px] '>type <br /> <span className='text-yellow'>d’activite</span></h2> 
+          <div>
+            <ButtonFill content="30 juin 2024"/>
+          </div>
+        </div>
+        <div className='flex items-center justify-center text-center '>
+          <div className='text-center pr-5 mr-8'>
+            <h4 className='text-white font-DMMono text-[18px] md:text-[32px]'>Antananarivo</h4>
+            <div className='flex items-center '>
+              <div className='w-[22px] h-[1px] bg-white mr-1'></div>
+              <p className='font-DMMono text-bruning'>en presentiel</p>
+            </div>
+          </div>
+          <div className='text-center pr-5'>
+            <h4 className='text-white font-DMMono text-[18px] md:text-[32px]'>Fianarantsoa</h4>
+            <div className='flex items-center '>
+              <div className='w-[22px] h-[1px] bg-white mr-1'></div>
+              <p className='font-DMMono text-bruning '>en presentiel</p>
+            </div>
+          </div>
+        </div>
+
+        <Conference/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </section>
   )
 }
 
