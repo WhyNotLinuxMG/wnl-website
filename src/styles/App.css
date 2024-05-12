@@ -1,0 +1,26 @@
+.top-section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(31deg, #020F13, #02141D,#003566);;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wnl-text-hidden-logo{
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+.color-yellow-sea{
+    color: #EEA736;
+}
