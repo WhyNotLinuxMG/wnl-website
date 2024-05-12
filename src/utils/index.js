@@ -7,6 +7,11 @@ import Conf6 from '../assets/images/conf6.png'
 import Conf7 from '../assets/images/conf7.png'
 import Conf8 from '../assets/images/conf8.png'
 
+import Esti from '../assets/images/esti.png'
+import Etech from '../assets/images/etech.png'
+import Gdsc from '../assets/images/gdsc.png'
+import MadaLinux from '../assets/images/madalinux.png'
+import Axian from '../assets/images/axian.png'
 export const conferenceImage=[
     {
         id:1,
@@ -58,4 +63,37 @@ export const conferenceImage=[
 
     },
 
+]
+
+export const stand=[
+    {
+        id:1,
+        number:"01",
+        image:Esti
+    },
+    {
+        id:2,
+        number:"02",
+        image:Etech
+    },
+    {
+        id:3,
+        number:"03",
+        image:Axian
+    },
+    {
+        id:4,
+        number:"04",
+        image:MadaLinux
+    },
+    {
+        id:5,
+        number:"05",
+        image:Esti
+    },
+    {
+        id:6,
+        number:"06",
+        image:Gdsc
+    },
 ]
