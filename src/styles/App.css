@@ -17,9 +17,11 @@
     justify-content: space-between;
 }
 .wnl-text-hidden-logo{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: #fff;
+    display: block;
+    height: 30px;
 }
 .color-yellow-sea{
     color: #EEA736;
