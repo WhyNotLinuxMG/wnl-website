@@ -22,11 +22,6 @@ jobs:
         npm install
         npm install gh-pages --save-dev
 
-    
-    - name: Config git user
-      run: |
-        git remote add origin https://github.com/WhyNotLinuxMG/whynotlinux-website.git
-
-
+  
     - name: Build and Deploy React app to GitHub Pages
       run: npm run deploy
