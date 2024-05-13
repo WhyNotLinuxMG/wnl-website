@@ -12,6 +12,8 @@ import Etech from '../assets/images/etech.png'
 import Gdsc from '../assets/images/gdsc.png'
 import MadaLinux from '../assets/images/madalinux.png'
 import Axian from '../assets/images/axian.png'
+
+import MobLine from "../assets/images/mobileLine.png"
 export const conferenceImage=[
     {
         id:1,
@@ -95,5 +97,51 @@ export const stand=[
         id:6,
         number:"06",
         image:Gdsc
+    },
+]
+
+export const statistique =[
+    {
+        id:1,
+        number:"350",
+        text:"Participants"
+    },
+    {
+        id:2,
+        number:"8",
+        text:"Thématiques développées"
+    },
+    {
+        id:3,
+        number:"6",
+        text:"Stands avec des projets incroyables"
+    },
+    {
+        id:4,
+        number:"5",
+        text:"Merveilleurs sponsor"
+    },
+]
+export const comptetionList=[
+    {
+        id:1,
+        content:"Meme challenge",
+        event:"Facebook",
+        line:MobLine,
+        about:"Challenge des meilleurs memes relié à l'IT."
+    },
+    {
+        id:2,
+        content:"Chasse au trésor",
+        event:"En présentiel",
+        line:MobLine,
+        about:"Une compétition de scripting."
+    },
+    {
+        id:3,
+        content:"Why Not My Desktop",
+        event:"En présentiel",
+        line:MobLine,
+        about:"Élection de celui qui a le meilleur DE."
     },
 ]
