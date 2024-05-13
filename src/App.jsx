@@ -1,3 +1,8 @@
+
+import Home from './pages/Home'
+
+import './styles/App.css'
+
 import React from 'react'
 import ButtonFill from './components/ButtonFill'
 import Conference from './components/Conference'
@@ -7,7 +12,7 @@ import Vector from './assets/images/Vector.png'
 const App = () => {
   return (
     <>
-    
+      <Home/>
       <section className='bg-background'>
       <div className='max-w-[1700px] mx-auto pt-5'>
         <div className='flex flex-col items-center justify-center '>
