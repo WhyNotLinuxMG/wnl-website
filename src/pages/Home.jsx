@@ -1,7 +1,7 @@
 import Nav from "../components/nav"
 const Home = ()=>{
-    <section className="home">
+    return <div className="top-section">
         <Nav></Nav>
-    </section>
+    </div>
 }
 export default Home
