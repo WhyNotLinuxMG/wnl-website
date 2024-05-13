@@ -2,7 +2,7 @@ name: Build and Deploy in Dev Mode
 
 on:
   push:
-    branches: [ "main", "ci"]
+    branches: [ "main", "feat/cd-gh-pages"]
 
 jobs:
   build:
