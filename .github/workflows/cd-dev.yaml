@@ -22,6 +22,10 @@ jobs:
         npm install
         npm install gh-pages --save-dev
 
+    - name: config git 
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
   
     - name: Build and Deploy React app to GitHub Pages
       run: npm run deploy
