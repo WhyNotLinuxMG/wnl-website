@@ -11,7 +11,7 @@ import { stand } from './utils'
 import Vector from './assets/images/Vector.png'
 const App = () => {
   return (
-    <section className='container'>
+    <>
       <Home/>
       <section className='bg-background'>
       <div className='max-w-[1700px] mx-auto pt-5'>
@@ -62,7 +62,7 @@ const App = () => {
             </div>
           </div>
       </section>
-    </section>
+    </>
   )
 }
 

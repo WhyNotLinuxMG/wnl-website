@@ -8,7 +8,9 @@
     src: local("DMMono-Light"),
         url("../fonts/dm-mono-2/DMMono-Light.ttf") format("truetype");
 }
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     margin: 0;
