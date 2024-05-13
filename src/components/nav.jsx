@@ -1,13 +1,6 @@
 import Logo from '../ressources/logos_linux-tux.svg'
 import NavItem from './NavItem'
 
-/*
-Corrige le navbar ci-dessous. 
-Je veux afficher 4 menue et un bouton.
-Les menues sont "à propos", "activités", "archive" et "FAQ".
-Et le bouton "Inscription"
-Gére bien la responsivité
-*/ 
 const Nav = () => {
 
     return  <header className="flex items-center justify-between py-10">
