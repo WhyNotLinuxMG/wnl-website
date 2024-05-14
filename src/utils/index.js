@@ -96,5 +96,5 @@ export const stand = [
   },
 ];
 
-export * from "./organisateurs";
-export * from "./partenaires";
+export * from "./organizers";
+export * from "./partners";

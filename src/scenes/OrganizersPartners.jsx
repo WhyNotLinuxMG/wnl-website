@@ -1,4 +1,4 @@
-import { organisateurs, partenaires } from "../utils/";
+import { organizers, partners } from "../utils/";
 import Title from "../components/organizersPartners/Title";
 import Associates from "../components/organizersPartners/Associates";
 import Associate from "../components/organizersPartners/Associate";
@@ -13,9 +13,9 @@ function OrganizersPartners() {
           Organisa<span className="text-yellow">teurs</span>{" "}
         </Title>
         <Associates>
-          {organisateurs &&
-            organisateurs.map((org, index) => {
-              return <Associate key={index} associate={org} />;
+          {organizers &&
+            organizers.map((organizer, index) => {
+              return <Associate key={index} associate={organizer} />;
             })}
         </Associates>
       </div>
@@ -26,6 +26,12 @@ function OrganizersPartners() {
         <Title>
           Nos <span className="text-yellow">Partenaires</span>{" "}
         </Title>
+        <Associates>
+          {partners &&
+            partners.map((partner, index) => {
+              return <Associate key={index} associate={partner} />;
+            })}
+        </Associates>
       </div>
     </section>
   );
