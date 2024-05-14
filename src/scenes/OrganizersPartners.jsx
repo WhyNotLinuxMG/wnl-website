@@ -1,5 +1,7 @@
 import { organisateurs, partenaires } from "../utils/";
 import Title from "../components/organizersPartners/Title";
+import Associates from "../components/organizersPartners/Associates";
+import Associate from "../components/organizersPartners/Associate";
 
 //ORGANISATEURS ET PARTENAIRES
 function OrganizersPartners() {
@@ -10,6 +12,12 @@ function OrganizersPartners() {
         <Title>
           Organisa<span className="text-yellow">teurs</span>{" "}
         </Title>
+        <Associates>
+          {organisateurs &&
+            organisateurs.map((org, index) => {
+              return <Associate key={index} associate={org} />;
+            })}
+        </Associates>
       </div>
       {/* SEPARATORS */}
       <div className=" m-auto h-3 box-border border-dashed border-y-2 mb-24 opacity-50 text-raven "></div>
