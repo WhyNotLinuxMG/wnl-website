@@ -1,16 +1,18 @@
+
+
 @font-face {
-    font-family: "Kontes-Compressed";
-    src: local("Kontes-Compressed"),
-        url("../fonts/Kontes/Kontes-Compressed.otf") format("truetype");
-}
-@font-face {
-    font-family: "DMMono-Light";
-    src: local("DMMono-Light"),
-        url("../fonts/dm-mono-2/DMMono-Light.ttf") format("truetype");
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    font-family: "DMMono";
+    src: url("../assets/fonts/DMMono-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "kontes";
+    src: url("../assets/fonts/demo-kontes-compressed-bold.otf") format("opentype");
+  }
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
 
 body {
     margin: 0;
