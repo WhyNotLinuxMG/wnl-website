@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ListConference = ({image,content,hours}) => {
   return (
     <div className='relative m-5'>
@@ -12,5 +10,4 @@ const ListConference = ({image,content,hours}) => {
     </div>
   )
 }
-
 export default ListConference
