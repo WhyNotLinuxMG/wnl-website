@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Stands = ({number,image}) => {
+const Stands = ({image,number}) => {
   return (
     <div className='m-5'>
         <div className='flex items-center '>
@@ -20,7 +20,7 @@ const Stands = ({number,image}) => {
         </div>
         
     </div>
-  )
+)
 }
 
 export default Stands
