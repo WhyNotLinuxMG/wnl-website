@@ -18,7 +18,8 @@ export default {
       },
       fontFamily:{
         kontes:["kontes","sans-serif"],
-        DMMono:["DMMono","sans-serif"]
+        DMMono:["DMMono","sans-serif"],
+        KontesCompressed:["kontes-compressed","sans-serif"]
       }
     },
   },
