@@ -1,5 +1,4 @@
 import React from 'react'
-import Vector from '../assets/images/Vector.png'
 const Stands = ({image,number}) => {
   return (
     <div className='m-5'>
@@ -8,7 +7,7 @@ const Stands = ({image,number}) => {
             <p className='font-DMMono text-raven'>n°{number}</p>
         </div>
         <div className='mt-5 mb-7'>
-                    <img src={image} alt="" />
+            <img src={image} alt="" />
         </div>
         <div className='mb-5'>
             <h4 className='pb-3 text-bruning font-DMMono text-[22px]'>Salle d'exposition</h4>
