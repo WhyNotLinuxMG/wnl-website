@@ -3,20 +3,10 @@
 }
 
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.wnl-text-hidden-logo {
-    color: #fff;
-    display: block;
-    height: 28px;
+
+.Kontes-Compressed{
     font-family: "Kontes-Compressed";
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 44.3px;
 }
 
 .color-yellow-sea {
