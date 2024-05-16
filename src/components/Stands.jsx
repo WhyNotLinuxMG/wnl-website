@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Stands = ({image,number}) => {
   return (
     <div className='m-5'>

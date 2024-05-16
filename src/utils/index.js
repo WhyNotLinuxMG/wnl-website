@@ -145,3 +145,5 @@ export const comptetionList=[
         about:"Élection de celui qui a le meilleur DE."
     },
 ]
+export * from "./organizers";
+export * from "./partners";
