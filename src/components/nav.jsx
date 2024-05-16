@@ -13,7 +13,7 @@ const Nav = () => {
                     <div className="wnl-text-hidden-logo">Why not <span className='color-yellow-sea'>Linux</span></div>
                 </div>
             </div>
-            <div className='flex items-center space-x-4 leading-5 sm:space-x-6'>
+            <div className='flex items-center space-x-6 leading-5 sm:space-x-10'>
                 <NavItem>À propos</NavItem>
                 <Drop/>
                 <NavItem>Archive</NavItem>
