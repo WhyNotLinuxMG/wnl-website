@@ -17,8 +17,9 @@ export default {
         white:"#FFFFFF"
       },
       fontFamily:{
-        kontes:["kontes","sans-serif"],
-        DMMono:["DMMono","sans-serif"]
+        kontes: ["kontes-Compressed","sans-serif"],
+        DMMono: ["DMMono", "sans-serif"],
+        DMMonoLight: ["DMMono-Light", "sans-serif"],
       }
     },
   },
