@@ -4,11 +4,11 @@ import NavItem from './NavItem'
 
 const Nav = () => {
 
-    return  <header className="flex items-center justify-between py-10">
+    return  <header className="flex items-center justify-between py-5">
             <div>
                 <div className="logo">
                     <div className="wnl-logo">
-                        <img src={Logo} height={60} width={60} />
+                        <img src={Logo}  />
                     </div>
                     <div className="wnl-text-hidden-logo">Why not <span className='color-yellow-sea'>Linux</span></div>
                 </div>
