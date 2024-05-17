@@ -13,14 +13,18 @@ import Photos from './scenes/Photos'
 import Questions from './scenes/Questions'
 import GetTicket from './scenes/GetTicket'
 import Footer from './scenes/Footer'
+import About from './scenes/About'
 
 const App = () => {
   return (
     <>
-      <Home/>
+      <Home />
       <div className="bg-background">
+
+
         <div className="mx-auto max-w-[1600px]  ">
           <OrganizersPartners/>
+           <About/>
           <Conferences/>
           <Stande/>
           <Statistiques/>
@@ -32,6 +36,7 @@ const App = () => {
           <GetTicket/>
           <Footer/>
         </div>     
+
       </div>
     </>
   )
