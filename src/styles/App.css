@@ -3,27 +3,22 @@
 }
 
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.wnl-text-hidden-logo {
-    color: #fff;
-    display: block;
-    height: 28px;
+
+.Kontes-Compressed{
     font-family: "Kontes-Compressed";
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 44.3px;
+}
+.Kontes-Compressed-Bold{
+    font-family: "Kontes-CompressedBold";
 }
 
 .color-yellow-sea {
     color: #EEA736;
 }
 
-
+.color-raven{
+    color: #6C757D;
+}
 
 .nav-list {
     color: #fff;
@@ -31,4 +26,11 @@
     font-family: "DMMono-Light";
     font-size: 20px;
     text-decoration: none;
+}
+.backtitle{
+font-size: 98px;
+font-weight: 400;
+line-height: 115.84px;
+text-align: left;
+
 }
