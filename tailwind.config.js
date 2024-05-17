@@ -1,6 +1,10 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,12 +17,12 @@ export default {
         whiteSmoke: "#F6F6F6",
         white: "#FFFFFF",
       },
-      fontFamily:{
-        kontes: ["kontes-Compressed","sans-serif"],
-        DMMono: ["DMMono", "sans-serif"],
-        DMMonoLight: ["DMMono-Light", "sans-serif"],
-      }
+      fontFamily: {
+        kontes: ["kontes-compressed", "sans-serif"],
+        DMMono: ["DMMono","DMMono-Light", "sans-serif"],
+        KontesCompressed: ["kontes-compressed", "sans-serif"],
+      },
     },
   },
   plugins: [],
-};
+}

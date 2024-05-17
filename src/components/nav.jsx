@@ -4,16 +4,16 @@ import NavItem from './NavItem'
 
 const Nav = () => {
 
-    return  <header className="flex items-center justify-between py-10">
+    return  <header className="flex items-center justify-between py-5">
             <div>
-                <div className="logo">
-                    <div className="wnl-logo">
-                        <img src={Logo} height={60} width={60} />
+                <div className="flex items-center justify-between">
+                    <div className="mr-3">
+                        <img src={Logo}  />
                     </div>
-                    <div className="wnl-text-hidden-logo">Why not <span className='color-yellow-sea'>Linux</span></div>
+                    <div className="hidden h-6 text-3xl text-white text-center  Kontes-Compressed sm:block">Why not <span className='color-yellow-sea'>Linux</span></div>
                 </div>
             </div>
-            <div className='flex items-center space-x-4 leading-5 sm:space-x-6'>
+            <div className='flex items-center space-x-6 leading-5 sm:space-x-10'>
                 <NavItem>À propos</NavItem>
                 <Drop/>
                 <NavItem>Archive</NavItem>
