@@ -34,3 +34,29 @@ line-height: 115.84px;
 text-align: left;
 
 }
+
+.question{
+    font-family: 'DMMono-Light';
+    font-size: x-large;
+    color: #FFFFFF;
+    padding-bottom: 10%;
+
+}
+.question_last{
+    font-family: 'DMMono-Light';
+    font-size: x-large;
+    color: #FFFFFF;
+    padding-bottom: 3%;
+
+}
+
+.question:not(:last-child) {
+    border-bottom: 1px solid #f6f6f6;
+   
+  }
+  
+  .up{
+    color: white;
+    font-weight: bolder;
+  }
+ 
