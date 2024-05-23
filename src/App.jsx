@@ -5,7 +5,9 @@ import Comptetion from './page/Comptetion'
 import Statistiques from './page/Statistiques'
 import Home from './scenes/Home'
 import './styles/App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+import CountDownDay from './scenes/CountDownDay'
 import OrganizersPartners from './scenes/OrganizersPartners'
 import Stat from './scenes/Stat'
 import Challenges from './scenes/Challenges'
@@ -16,13 +18,13 @@ import Footer from './scenes/Footer'
 import About from './scenes/About'
 
 const App = () => {
+  const WNL = new Date("June 22, 2024").getTime();
   return (
     <>
       <Home />
       <div className="bg-background">
-
-
         <div className="mx-auto max-w-[1600px]  ">
+          <CountDownDay WNL={WNL}/>
           <OrganizersPartners/>
            <About/>
           <Conferences/>

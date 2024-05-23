@@ -21,6 +21,7 @@ export default {
         kontes: ["kontes-compressed", "sans-serif"],
         DMMono: ["DMMono","DMMono-Light", "sans-serif"],
         KontesCompressed: ["kontes-compressed", "sans-serif"],
+        Abraham:["abraham"]
       },
     },
   },
