@@ -16,7 +16,7 @@ const ButtonPlace = ({place,campus,selectedConf,Selected}) => {
       whileTap={{ scale: 0.9 }}
       animate={isOpen?"open":"closed"}
       
-      className={`text-center pr-5 p-5 mr-8 border border-gray-600 rounded-lg cursor-pointer ${(Selected===place)?"bg-ebony":" "}` }>
+      className={`text-center pr-5 p-5 mr-8 border border-ebony rounded-lg cursor-pointer ${(Selected===place)?"bg-ebony":" "}` }>
         <h4 className='text-white font-DMMono text-[18px] md:text-[32px]'>{place}</h4>
         <div className='flex items-center '>
             <img src={Selected===place?Local:LocalCol} alt="" />
