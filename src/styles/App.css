@@ -40,20 +40,28 @@ text-align: left;
     font-size: x-large;
     color: #FFFFFF;
     padding-bottom: 10%;
+    border-bottom: 1px solid #f6f6f6;
 
 }
 .question_last{
-    font-family: 'DMMono-Light';
+    border-bottom: none;
+}
+.reponse{
+    display: none;
+}
+.afficher{
+    display: block;
+}
+.afficher_question{
+    color: #cc7c64;
     font-size: x-large;
-    color: #FFFFFF;
-    padding-bottom: 3%;
-
+    font-family: 'DMMono-Light';
+  
+    border-bottom: none;
 }
 
-.question:not(:last-child) {
-    border-bottom: 1px solid #f6f6f6;
-   
-  }
+
+
   
   .up{
     color: white;

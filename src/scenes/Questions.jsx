@@ -14,7 +14,12 @@ function Questions() {
         </div>
         <div className="p-4 md:col-span-2 text-left">
           {questions_et_reponses.map((item, index) => (
-            <Question item={item} key={index} />
+            <Question 
+              item={item} 
+              index={index} 
+              isLast={index === questions_et_reponses.length - 1} 
+              key={index} 
+            />
           ))}
         </div>
       </div>
