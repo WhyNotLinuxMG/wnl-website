@@ -8,6 +8,10 @@
     font-family: "kontes";
     src: url("../assets/fonts/demo-kontes-compressed-bold.otf") format("opentype");
   }
+  @font-face {
+    font-family: "abraham";
+    src: url("../fonts/abraham/abraham.otf");
+  }
   
   @tailwind base;
   @tailwind components;
@@ -46,4 +50,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+}
+.progress-bar-white {
+  background-color: rgba(46, 50, 59, 1) !important;
 }
