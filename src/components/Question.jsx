@@ -14,7 +14,7 @@ export default function Question({ item, index, isLast }) {
         {item.question}
         {isAnswerVisible ? <IoIosArrowUp className="text-2xl text-white" /> : <IoIosArrowDown className="text-2xl text-white" />}
       </div>
-      <div className={`reponse text-white mb-4 ${isAnswerVisible ? 'afficher' : 'cacher'}`}>
+      <div className={`reponse text-white mb-4 ${isAnswerVisible ? 'afficher' : 'cacher'} font-DMMono`}>
         {item.reponses}
       </div>
     </div>

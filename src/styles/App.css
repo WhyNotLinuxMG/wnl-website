@@ -48,13 +48,17 @@ text-align: left;
 }
 .reponse{
     display: none;
+    min-block-size: 15px;
 }
 .afficher{
     display: block;
+    font-size:large ;
+    word-spacing: 5%;
 }
 .afficher_question{
     color: #cc7c64;
     font-size: x-large;
+   
     font-family: 'DMMono-Light';
   
     border-bottom: none;
