@@ -43,6 +43,11 @@ body {
     src: local("Kontes-CompressedBold"),
         url("../assets/fonts/demo-kontes-compressed-bold.otf") format("truetype");
 }
+@font-face {
+    font-family: "Kontes-CompressedBold";
+    src: local("Kontes-CompressedBold"),
+        url("../assets/fonts/demo-kontes-compressed-bold.otf") format("truetype");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
