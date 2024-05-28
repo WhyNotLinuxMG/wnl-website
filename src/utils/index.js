@@ -197,5 +197,13 @@ export const PlaceButton=[
     {id:1,place:"Antananarivo",campus:"campus sesame | Ambatoroka"},
     {id:2,place:"Fianarantsoa",campus:"emit Andrainjato"}
 ]
+
+export const GameStand=[
+    {id:1,game:"question pour un champion",about:"Un jeu interactif basé sur Linux, offrant une expérience éducative et divertissante."},
+    {id:2,game:"Défi de Shell Scripting",about:"Une compétition pour les codeurs visant à résoudre des défis complexes."},
+    {id:3,game:"Desktop Challenge",about:"Un défi pour personnaliser et optimiser l’environnement desktop, mettant en valeur la créativité et l’expertise technique."},
+
+
+]
 export * from "./organizers";
 export * from "./partners";
