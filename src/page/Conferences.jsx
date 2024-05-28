@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import ButtonFill from '../components/ButtonFill'
 import ButtonPlace from '../components/ButtonPlace'
 import Conference from '../components/Conference'
-import ButtonFill from '../components/ButtonFill'
 
-import { PlaceButton } from '../utils'
-import { conferenceImage } from '../utils'
+import { conferenceImage, PlaceButton } from '../utils'
 
 const Conferences = () => {
     const initalConference=conferenceImage.filter((conf) => conf.place === "Antananarivo")

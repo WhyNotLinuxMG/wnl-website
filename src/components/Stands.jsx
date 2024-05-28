@@ -1,6 +1,5 @@
-import React from 'react'
-import GameStands from './GameStands'
 import { GameStand } from '../utils'
+import GameStands from './GameStands'
 const Stands = ({image,number}) => {
 
   return (

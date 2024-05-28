@@ -1,7 +1,5 @@
-import React from 'react'
 import ButtonFill from './ButtonFill'
 import ListConference from './ListConference'
-import { motion } from 'framer-motion'
 const Conference = ({conferences}) => {
   
   return (
