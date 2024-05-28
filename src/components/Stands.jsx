@@ -1,8 +1,7 @@
-import React from 'react'
-import GameStands from './GameStands'
 import { GameStand } from '../utils'
-const Stands = ({image,number}) => {
+import GameStands from './GameStands'
 
+const Stands = ({image,number}) => {
   return (
     <div className='m-5'>
         <div className='flex items-center '>

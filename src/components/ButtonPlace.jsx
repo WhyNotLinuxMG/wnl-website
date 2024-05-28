@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
-import LocalCol from '../assets/images/localColor.png'
-import Local from '../assets/images/local.png'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+import Local from '../assets/images/local.png'
+import LocalCol from '../assets/images/localColor.png'
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
-}
 const ButtonPlace = ({place,campus,selectedConf,Selected}) => {
   const [isOpen,setIsOpen]=useState(false)
   return (
