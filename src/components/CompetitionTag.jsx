@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CompetitionTag = ({content,event,line,about}) => {
   return (
     <div className=' pr-5 mr-8'>

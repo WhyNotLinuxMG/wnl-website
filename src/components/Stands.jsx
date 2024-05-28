@@ -1,4 +1,6 @@
-import React from 'react'
+import { GameStand } from '../utils'
+import GameStands from './GameStands'
+
 const Stands = ({image,number}) => {
   return (
     <div className='m-5'>
@@ -11,11 +13,10 @@ const Stands = ({image,number}) => {
         </div>
         <div className='mb-5'>
             <h4 className='pb-3 text-bruning font-DMMono text-[22px]'>Salle d'exposition</h4>
-            <ul className='ml-9'>
-                <li className='list-disc text-white font-DMMono'>Question pour un champion</li>
-                <li className='list-disc text-white font-DMMono'>Défi de Shell Scripting</li>
-                <li className='list-disc text-white font-DMMono'>Desktop Challenge</li>
-            </ul>
+            {GameStand.map((item)=>(
+                <GameStands key={item.id} {...item} />
+            ))}
+            
         </div>
         
     </div>

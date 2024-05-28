@@ -1,4 +1,3 @@
-import React from 'react'
 import About1 from '../assets/images/about1.jpeg'
 import About2 from '../assets/images/about2.jpeg'
 import ButtonFill from '../components/ButtonFill'

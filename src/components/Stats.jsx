@@ -1,6 +1,5 @@
-import React from 'react'
-import Shape from "../assets/images/shape.png"
 import Linux from "../assets/images/linux.png"
+import Shape from "../assets/images/shape.png"
 import { statistique } from '../utils'
 import StatsDetail from './StatsDetail'
 const Stats = () => {
