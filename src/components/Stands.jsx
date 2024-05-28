@@ -1,7 +1,7 @@
 import { GameStand } from '../utils'
 import GameStands from './GameStands'
-const Stands = ({image,number}) => {
 
+const Stands = ({image,number}) => {
   return (
     <div className='m-5'>
         <div className='flex items-center '>

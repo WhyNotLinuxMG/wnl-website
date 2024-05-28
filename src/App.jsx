@@ -15,7 +15,6 @@ import Questions from './scenes/Questions'
 import Stat from './scenes/Stat'
 import './styles/App.css'
 
-
 const App = () => {
   const WNL = new Date("June 22, 2024").getTime();
   return (

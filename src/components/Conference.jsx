@@ -1,7 +1,7 @@
 import ButtonFill from './ButtonFill'
 import ListConference from './ListConference'
+
 const Conference = ({conferences}) => {
-  
   return (
     <div className='pt-6 mt-6 '>
         <ButtonFill content="Conference"/>
