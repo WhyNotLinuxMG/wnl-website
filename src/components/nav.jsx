@@ -1,7 +1,9 @@
+
 import Logo from '../ressources/logos_linux-tux.svg'
 import Drop from './Drop'
 import NavItem from './NavItem'
 import React, { useState, useEffect } from "react";
+
 const Nav = () => {
     const [navSize, setnavSize] = useState("10rem");
     const [navColor, setnavColor] = useState("transparent");
@@ -47,5 +49,6 @@ const Nav = () => {
         </div>
 
     </header>
+
 }
 export default Nav

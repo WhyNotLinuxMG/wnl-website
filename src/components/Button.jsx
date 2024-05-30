@@ -1,6 +1,6 @@
-import React from 'react'
-import Vector from '../assets/images/Vector.png'
 import { motion } from 'framer-motion'
+import Vector from '../assets/images/Vector.png'
+
 const Button = ({content}) => {
   return (
     <>
