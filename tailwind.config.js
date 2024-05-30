@@ -1,3 +1,4 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -14,9 +15,10 @@ export default {
         white: "#FFFFFF",
       },
       fontFamily: {
-        kontes: ["kontes", "sans-serif"],
-        DMMono: ["DMMono-Light", "sans-serif"],
+        kontes: ["kontes-compressed", "sans-serif"],
+        DMMono: ["DMMono", "DMMono-Light", "sans-serif"],
         KontesCompressed: ["kontes-compressed", "sans-serif"],
+        Abraham: ["abraham"],
       },
     },
   },
