@@ -10,7 +10,7 @@ export default function Drop() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5  font-DMMono text-white ">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5  font-DMMono text-white hidden  sm:flex">
           Activités
           <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>

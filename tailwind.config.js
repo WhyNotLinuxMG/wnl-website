@@ -1,10 +1,7 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -19,11 +16,11 @@ export default {
       },
       fontFamily: {
         kontes: ["kontes-compressed", "sans-serif"],
-        DMMono: ["DMMono","DMMono-Light", "sans-serif"],
+        DMMono: ["DMMono", "DMMono-Light", "sans-serif"],
         KontesCompressed: ["kontes-compressed", "sans-serif"],
-        Abraham:["abraham"]
+        Abraham: ["abraham"],
       },
     },
   },
   plugins: [],
-}
+};
