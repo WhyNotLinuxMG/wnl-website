@@ -1,4 +1,3 @@
-import React from 'react'
 import Slider from "react-slick";
 import { photo } from '../utils';
 
@@ -68,7 +67,7 @@ const PhotoSlider = () => {
     return (
         <div className='mt-5'>
             <div className="slider-container overflow-hidden">
-                <Slider {...settings}>
+                <Slider {...settings} className="pb-4">
                     {photo.map((item) => (
                         <div key={item.id} className='pl-5'>
                             <img className='pb-2' src={item.img} alt="" />

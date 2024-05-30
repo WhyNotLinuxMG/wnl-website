@@ -1,4 +1,3 @@
-    import React from 'react'
 import Button from '../components/Button'
 import ButtonFill from '../components/ButtonFill'
 import CompetitionTag from '../components/CompetitionTag'
