@@ -12,7 +12,9 @@ import Etech from "../assets/images/etech.png";
 import Gdsc from "../assets/images/gdsc.png";
 import MadaLinux from "../assets/images/madalinux.png";
 import Axian from "../assets/images/axian.png";
-
+import Retour1 from "../assets/images/retour-1.png"
+import Retour2 from "../assets/images/retour-2.png"
+import Retour3 from "../assets/images/retour-3.png"
 import MobLine from "../assets/images/mobileLine.png";
 export const conferenceImage = [
   {

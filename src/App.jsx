@@ -8,10 +8,8 @@ import './styles/App.css'
 
 import CountDownDay from './scenes/CountDownDay'
 import OrganizersPartners from './scenes/OrganizersPartners'
-import Stat from './scenes/Stat'
 
-import Challenges from './scenes/Challenges'
-import CountDownDay from './scenes/CountDownDay'
+
 import Footer from './scenes/Footer'
 import GetTicket from './scenes/GetTicket'
 import Photos from './scenes/Photos'
