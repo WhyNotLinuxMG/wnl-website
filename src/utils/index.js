@@ -217,5 +217,28 @@ export const photo=[
     {id:4,img:Retour1},
     {id:5,img:Retour2},
 ]
+export const AccordionContent=[
+    {
+        id:1,
+        title:"À qui s'adresse cet événement ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    {
+        id:2,
+        title:"Qui peut participer aux compétitions ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    {
+        id:3,
+        title:"Pour plus d'informations, qui puis-je contacter ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    {
+        id:4,
+        title:"Comment devenir sponsor ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    
+]
 export * from "./organizers";
 export * from "./partners";

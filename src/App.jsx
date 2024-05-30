@@ -29,13 +29,11 @@ const App = () => {
           <Stande/>
           <Statistiques/>
           <Comptetion/>
-          <Stat/>
-          <Challenges/>
           <Photos/>
           <Questions/>
+        </div>     
           <GetTicket/>
           <Footer/>
-        </div>     
 
       </div>
     </>

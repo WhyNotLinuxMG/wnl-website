@@ -34,3 +34,8 @@ line-height: 115.84px;
 text-align: left;
 
 }
+
+.gradientBg{
+    background: rgb(2,15,19);
+    background: linear-gradient(61deg, rgba(2,15,19,1) 0%, rgba(17,86,166,1) 100%);
+}
