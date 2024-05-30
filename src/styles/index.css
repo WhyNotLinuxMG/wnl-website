@@ -56,3 +56,7 @@ body {
 .progress-bar-white {
   background-color: rgba(46, 50, 59, 1) !important;
 }
+/* Add this CSS to your stylesheet */
+.custom-dot.slick-active {
+  background-color: red !important;
+}
