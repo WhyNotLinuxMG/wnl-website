@@ -1,19 +1,18 @@
 // src/components/Accordion.js
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { AccordionContent } from '../utils';
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const AccordionItem = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b ml-8 max-w-4xl">
+    <div className="border-b border-gray-700 max-w-4xl md:mx-6">
       <button
         className="w-full text-left p-4  focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center">
-          <span className={`${isOpen ? "text-bruning":"text-white"} font-DMMono text-[18px] md:text-[28px] `}>{title}</span>
+          <span className={`${isOpen ? "text-bruning":"text-white"} font-DMMono text-[18px] md:text-[22px] `}>{title}</span>
           <span>{isOpen ? <MdOutlineKeyboardArrowUp color='white' width="200px" />: <MdOutlineKeyboardArrowDown color='white' />}</span>
         </div>
       </button>

@@ -1,17 +1,17 @@
-import Nav from "../components/nav";
-import ButtonFill from "../components/ButtonFill";
-import Button from "../components/Button";
-import GetTicketButton from "../components/GetTicketButton";
 import Qr from "../assets/images/qr.png";
+import Button from "../components/Button";
+import ButtonFill from "../components/ButtonFill";
+import GetTicketButton from "../components/GetTicketButton";
+import Nav from "../components/nav";
 
 const Home = () => {
   return (
     <div className="top-section">
-      <div className="mx-6">
+      <div className="mx-12">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-between items-center md:items-stretch">
             <Nav />
-            <div className=" max-w-7xl">
+            <div className="max-w-7xl mx-12">
               <div className="pt-28 flex flex-col md:items-end md:justify-between">
                 {/* for mobile device  */}
                 <div className="w-full md:w-1/2 md:hidden">
@@ -36,7 +36,7 @@ const Home = () => {
                 <div className="w-full  hidden md:flex">
                   <div className="flex  justify-center flex-col ">
                     <ButtonFill content="22 juin 2024" />
-                    <h2 className="font-kontes text-white text-[42px] md:text-[90px] max-w-2xl">
+                    <h2 className="font-kontes text-white text-[42px] md:text-[74px] max-w-2xl">
                       Empowering Communities  Through {" "}
                       <span className="text-raven">Open Source.</span>
                     </h2>
