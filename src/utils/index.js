@@ -14,6 +14,10 @@ import MadaLinux from '../assets/images/madalinux.png'
 import Axian from '../assets/images/axian.png'
 
 import MobLine from "../assets/images/mobileLine.png"
+
+import Retour1 from "../assets/images/retour-1.png"
+import Retour2 from "../assets/images/retour-2.png"
+import Retour3 from "../assets/images/retour-3.png"
 export const conferenceImage=[
     {
         id:1,
@@ -204,6 +208,14 @@ export const GameStand=[
     {id:3,game:"Desktop Challenge",about:"Un défi pour personnaliser et optimiser l’environnement desktop, mettant en valeur la créativité et l’expertise technique."},
 
 
+]
+
+export const photo=[
+    {id:1,img:Retour1},
+    {id:2,img:Retour2},
+    {id:3,img:Retour3},
+    {id:4,img:Retour1},
+    {id:5,img:Retour2},
 ]
 export * from "./organizers";
 export * from "./partners";
