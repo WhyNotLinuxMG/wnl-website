@@ -28,7 +28,7 @@ const Nav = () => {
             </div>
             <div className="hidden h-6 text-3xl text-white text-center  Kontes-Compressed sm:block">Why not <span className='color-yellow-sea'>Linux</span></div>
           </div>
-          <div className="hidden h-6 text-3xl text-white text-center  Kontes-Compressed sm:block">Why not <span className='color-yellow-sea'>Linux</span></div>
+          {/* <div className="hidden h-6 text-3xl text-white text-center  Kontes-Compressed sm:block">Why not <span className='color-yellow-sea'>Linux</span></div> */}
         </div>
         <div className='flex items-center space-x-6 leading-5 sm:space-x-10'>
           <NavItem>À propos</NavItem>
