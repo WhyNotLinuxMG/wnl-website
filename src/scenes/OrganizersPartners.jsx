@@ -7,6 +7,8 @@ import Associate from "../components/organizersPartners/Associate";
 function OrganizersPartners() {
   return (
     <section className=" bg-background py-[7.5rem] px-20 font-DMMono">
+      {/* SEPARATOR */}
+      <div className=" mx-auto md:h-3 h-2 mb-16 box-border border-dashed border-y-2 opacity-10 text-raven "></div>
       {/*ORGANISATEURS*/}
       <div className="m-auto pb-20">
         <Title>
@@ -20,9 +22,9 @@ function OrganizersPartners() {
         </Associates>
       </div>
       {/* SEPARATORS */}
-      <div className=" m-auto h-3 box-border border-dashed border-y-2 mb-24 opacity-50 text-raven "></div>
+      <div className=" mx-auto md:h-3 h-2 mb-16 box-border border-dashed border-y-2 opacity-10 text-raven "></div>
       {/*PARTENAIRES*/}
-      <div className="m-auto">
+      <div className="mx-auto">
         <Title>
           Nos <span className="text-yellow">Partenaires</span>{" "}
         </Title>
