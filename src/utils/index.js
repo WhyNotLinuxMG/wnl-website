@@ -12,7 +12,9 @@ import Etech from "../assets/images/etech.png";
 import Gdsc from "../assets/images/gdsc.png";
 import MadaLinux from "../assets/images/madalinux.png";
 import Axian from "../assets/images/axian.png";
-
+import Retour1 from "../assets/images/retour-1.png"
+import Retour2 from "../assets/images/retour-2.png"
+import Retour3 from "../assets/images/retour-3.png"
 import MobLine from "../assets/images/mobileLine.png";
 export const conferenceImage = [
   {
@@ -186,30 +188,47 @@ export const comptetionList = [
     about: "Élection de celui qui a le meilleur DE.",
   },
 ];
-export const PlaceButton = [
-  { id: 1, place: "Antananarivo", campus: "campus sesame | Ambatoroka" },
-  { id: 2, place: "Fianarantsoa", campus: "emit Andrainjato" },
-];
+export const PlaceButton=[
+    {id:1,place:"Antananarivo",campus:"campus sesame | Ambatoroka"},
+    {id:2,place:"Fianarantsoa",campus:"emit Andrainjato"}
+]
 
-export const GameStand = [
-  {
-    id: 1,
-    game: "question pour un champion",
-    about:
-      "Un jeu interactif basé sur Linux, offrant une expérience éducative et divertissante.",
-  },
-  {
-    id: 2,
-    game: "Défi de Shell Scripting",
-    about:
-      "Une compétition pour les codeurs visant à résoudre des défis complexes.",
-  },
-  {
-    id: 3,
-    game: "Desktop Challenge",
-    about:
-      "Un défi pour personnaliser et optimiser l’environnement desktop, mettant en valeur la créativité et l’expertise technique.",
-  },
-];
+export const GameStand=[
+    {id:1,game:"question pour un champion",about:"Un jeu interactif basé sur Linux, offrant une expérience éducative et divertissante."},
+    {id:2,game:"Défi de Shell Scripting",about:"Une compétition pour les codeurs visant à résoudre des défis complexes."},
+    {id:3,game:"Desktop Challenge",about:"Un défi pour personnaliser et optimiser l’environnement desktop, mettant en valeur la créativité et l’expertise technique."},
+
+
+]
+export const photo=[
+    {id:1,img:Retour1},
+    {id:2,img:Retour2},
+    {id:3,img:Retour3},
+    {id:4,img:Retour1},
+    {id:5,img:Retour2},
+]
+export const AccordionContent=[
+    {
+        id:1,
+        title:"À qui s'adresse cet événement ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    {
+        id:2,
+        title:"Qui peut participer aux compétitions ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    {
+        id:3,
+        title:"Pour plus d'informations, qui puis-je contacter ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    {
+        id:4,
+        title:"Comment devenir sponsor ?",
+        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+    },
+    
+]
 export * from "./organizers";
 export * from "./partners";
