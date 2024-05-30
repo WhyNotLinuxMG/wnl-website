@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="top-section">
       <div className="mx-6">
-        <div className='max-w-[1700px] mx-auto pt-5'>
+        <div className='max-w-[1700px] mx-auto '>
           <div className="flex flex-col justify-between">
             <Nav />
             <div className="mx-auto max-w-7xl ">
