@@ -1,9 +1,10 @@
+
 import Qr from "../assets/images/qr.png";
 import Button from "../components/Button";
 import ButtonFill from "../components/ButtonFill";
 import GetTicketButton from "../components/GetTicketButton";
 import Nav from "../components/nav";
-
+import Hero from "../page/Hero";
 const Home = () => {
   return (
     <div className="top-section">
