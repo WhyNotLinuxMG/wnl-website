@@ -210,23 +210,23 @@ export const photo=[
 export const AccordionContent=[
     {
         id:1,
-        title:"À qui s'adresse cet événement ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        title:"Quand-est-ce que l'évènement aura lieu ?",
+        description:"L'évènement aura lieu le 30 juin 2024."
     },
     {
         id:2,
         title:"Qui peut participer aux compétitions ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        description:"Les compétitions sont ouvertes à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses utilisant Linux."
     },
     {
         id:3,
         title:"Pour plus d'informations, qui puis-je contacter ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        description:"Pous plus d'information, vous pouvez nous contacter en nous envoyant un mail à whynotlinux@iteam-s.mg ou nous envoyer un message sur notre page Why Not Linux."
     },
     {
         id:4,
         title:"Comment devenir sponsor ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        description:"Pour devenir sponsor, il vous suffit de remplir la fiche de demande de sponsoring. ('fiche de demande de sponsoring', tu ajoutes un lien qui redirige vers la fiche d'inscription pour devenir sponsor. Demande à la personne chargé de faire la page de couverture le lien.)"
     },
     
 ]
