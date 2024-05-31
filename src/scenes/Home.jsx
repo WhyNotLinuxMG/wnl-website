@@ -1,5 +1,4 @@
 import Nav from "../components/nav";
-import ButtonFill from "../components/ButtonFill";
 import Hero from "../page/Hero";
 const Home = () => {
   return (
