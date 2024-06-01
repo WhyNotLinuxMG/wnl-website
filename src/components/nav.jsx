@@ -6,6 +6,8 @@ import React, { useState, useEffect } from "react";
 const Nav = () => {
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
+  const [borderWidth, setBorderWidth] = useState("0px");
+
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const handleClosingBurger = () => {
@@ -13,22 +15,27 @@ const Nav = () => {
       setIsBurgerOpen(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("resize", handleClosingBurger, false);
     return () => {
       window.removeEventListener("resize", handleClosingBurger);
     };
   }, []);
+
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
+    window.scrollY > 10
+      ? (setnavColor("#020F13"), setBorderWidth("1px"))
+      : (setnavColor("transparent"), setBorderWidth("0px"));
     window.innerWidth >= 1024
       ? window.scrollY > 10
         ? setnavSize("5rem")
         : setnavSize("10rem")
       : window.scrollY > 10
       ? setnavSize("5rem")
-      : setnavSize("7rem");
+      : setnavSize("8rem");
   };
+
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
@@ -38,23 +45,26 @@ const Nav = () => {
 
   return (
     <header
-      //   className="flex lg:flex-row flex-col h-screen bg-yellow fixed w-full top-0 left-0 z-50 px-5  items-center justify-between py-5"
-      className={`flex  fixed w-full top-0 left-0 z-50 lg:px-5 px-4 py-5  items-center justify-between
-       `}
+      className={`flex fixed w-full top-0 left-0 z-50 lg:px-5 px-4 py-5 border-raven
+       ${
+         isBurgerOpen
+           ? "flex-col top-section"
+           : "flex-row items-center justify-between"
+       }`}
       style={
         !isBurgerOpen
           ? {
               backgroundColor: navColor,
               height: navSize,
-              transition: "all 1s",
+              borderBottomWidth: borderWidth,
+              transition: "all 0.7s ease-in-out",
             }
           : {
-              backgroundColor: navColor,
-              height: navSize,
-              transition: "all 1s",
+              //   transition: "all 1s",
             }
       }
     >
+      {/* LOGO */}
       <div className="flex lg:w-auto w-full lg:block justify-between items-center">
         <div className="flex items-center justify-between ">
           <div className="mr-3">
@@ -64,6 +74,8 @@ const Nav = () => {
             Why not <span className="color-yellow-sea">Linux</span>
           </div>
         </div>
+
+        {/* BURGER BUTTON FOR SMALL SCREEN */}
         <button
           className="lg:hidden flex flex-col"
           onClick={() => setIsBurgerOpen(!isBurgerOpen)}
@@ -74,9 +86,12 @@ const Nav = () => {
         </button>
       </div>
 
+      {/* MENU FOR LARGE SCREEN AND WHEN BURGER IS OPEN FOR SMALL SCREEN */}
       <div
-        className={`lg:flex items-center leading-5 lg:gap-10 ${
-          isBurgerOpen ? "flex flex-col" : "hidden"
+        className={`lg:flex items-center leading-5 gap-10  ${
+          isBurgerOpen
+            ? "flex flex-col justify-start space-y-5 h-full py-10 top-11"
+            : "hidden -top-10 opacity-0"
         }`}
       >
         <NavItem>À propos</NavItem>
