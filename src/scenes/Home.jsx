@@ -23,11 +23,11 @@ const Home = () => {
                     </h2>
                     <p className="font-DMMono text-white max-w-xl text-[14px] md:text-[20px] mt-4">
                       Explorez le pouvoir transformateur de Linux. Rejoignez-nous pour
-                      découvrir son potentiel illimité lors de cet événement incontournable.
+                      découvrir son potentiel illimité lors de cet évènement incontournable.
                     </p>
                     <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
                       <GetTicketButton />
-                      <Button content="devenir sponsor" />
+                      <Button content="Devenir sponsor" />
                     </div>
                   </div>
                 </div>
@@ -42,11 +42,11 @@ const Home = () => {
                     </h2>
                     <p className="font-DMMono text-white max-w-3xl text-[14px] md:text-[20px] mt-4">
                       Explorez le pouvoir transformateur de Linux. Rejoignez-nous pour
-                      découvrir son potentiel illimité lors de cet événement incontournable.
+                      découvrir son potentiel illimité lors de cet évènement incontournable.
                     </p>
                     <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
                       <GetTicketButton />
-                      <Button content="devenir sponsor" />
+                      <Button content="Devenir sponsor" />
                     </div>
                   </div>
                   <div className="hidden md:flex md:justify-end md:items-end md:w-1/2">
