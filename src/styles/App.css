@@ -1,11 +1,7 @@
 .top-section {
-    background: #0057a8;
-    background: linear-gradient(207deg, #04315c 0%, rgb(1, 15, 22) 100%);
+  background: #0057a8;
+  background: linear-gradient(207deg, #04315c 0%, rgb(1, 15, 22) 100%);
 }
-
-
-
-
 .Kontes-Compressed {
     font-family: "Kontes-Compressed";
 }
@@ -15,19 +11,18 @@
 }
 
 .color-yellow-sea {
-    color: #EEA736;
+  color: #eea736;
 }
-
-.color-raven {
-    color: #6C757D;
+.color-raven { 
+  color: #6c757d;
 }
 
 .nav-list {
-    color: #fff;
-    font-weight: 400;
-    font-family: "DMMono-Light";
-    font-size: 20px;
-    text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-family: "DMMono-Light";
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /* .backtitle{
@@ -41,6 +36,7 @@ text-align: left;
 .gradientBg {
     background: rgb(2, 15, 19);
     background: linear-gradient(61deg, rgba(2, 15, 19, 1) 0%, rgba(17, 86, 166, 1) 100%);
+  
 }
 
 .contrib-container {
@@ -65,3 +61,4 @@ text-align: left;
     height: 0px;
 
 }
+
