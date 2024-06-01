@@ -4,7 +4,7 @@ import QR from '../assets/images/qr_code.png';
 import ButtonFill from "../components/ButtonFill";
 const Hero = () => {
     return (
-        <div className="grid mt-4 max-w-[1600px] mx-auto px-4 py-8 mx-auto items-center lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full">
+        <div className="grid mt-4 max-w-[1600px] mx-auto px-4 py-8 mx-auto items-center lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full hidden md:grid">
            <div className="contents">
                 <div className='mr-auto place-self-center lg:col-span-7 '>
                     <ButtonFill content="22 Juin 2024" />
