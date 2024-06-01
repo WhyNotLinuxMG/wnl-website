@@ -7,15 +7,15 @@ import Conf6 from "../assets/images/conf6.png";
 import Conf7 from "../assets/images/conf7.png";
 import Conf8 from "../assets/images/conf8.png";
 
+import Axian from "../assets/images/axian.png";
 import Esti from "../assets/images/esti.png";
 import Etech from "../assets/images/etech.png";
 import Gdsc from "../assets/images/gdsc.png";
 import MadaLinux from "../assets/images/madalinux.png";
-import Axian from "../assets/images/axian.png";
-import Retour1 from "../assets/images/retour-1.png"
-import Retour2 from "../assets/images/retour-2.png"
-import Retour3 from "../assets/images/retour-3.png"
 import MobLine from "../assets/images/mobileLine.png";
+import Retour1 from "../assets/images/retour-1.png";
+import Retour2 from "../assets/images/retour-2.png";
+import Retour3 from "../assets/images/retour-3.png";
 export const conferenceImage = [
   {
     id: 1,
@@ -162,7 +162,7 @@ export const statistique = [
   {
     id: 4,
     number: "5",
-    text: "Merveilleurs sponsor",
+    text: "Merveilleux sponsors",
   },
 ];
 export const comptetionList = [
@@ -189,8 +189,8 @@ export const comptetionList = [
   },
 ];
 export const PlaceButton=[
-    {id:1,place:"Antananarivo",campus:"campus sesame | Ambatoroka"},
-    {id:2,place:"Fianarantsoa",campus:"emit Andrainjato"}
+    {id:1,place:"Antananarivo",campus:"Campus sesame | Ambatoroka"},
+    {id:2,place:"Fianarantsoa",campus:"Emit Andrainjato"}
 ]
 
 export const GameStand=[
@@ -210,25 +210,26 @@ export const photo=[
 export const AccordionContent=[
     {
         id:1,
-        title:"À qui s'adresse cet événement ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        title:"Quand-est-ce que l'évènement aura lieu ?",
+        description:"L'évènement aura lieu le 22 juin 2024."
     },
     {
         id:2,
         title:"Qui peut participer aux compétitions ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        description:"Les compétitions sont ouvertes à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses utilisant Linux."
     },
     {
         id:3,
         title:"Pour plus d'informations, qui puis-je contacter ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        description:"Pous plus d'information, vous pouvez nous contacter en nous envoyant un mail à whynotlinux@iteam-s.mg ou nous envoyer un message sur notre page Why Not Linux."
     },
     {
         id:4,
         title:"Comment devenir sponsor ?",
-        description:"Cet événement s'adresse à toutes personnes passionnées d'informatique ou de technologie, ou simplement de personnes curieuses et intéressées par ces domaines."
+        description:"Pour devenir sponsor, il vous suffit de remplir la fiche de demande de sponsoring. ('fiche de demande de sponsoring', tu ajoutes un lien qui redirige vers la fiche d'inscription pour devenir sponsor. Demande à la personne chargé de faire la page de couverture le lien.)"
     },
     
 ]
 export * from "./organizers";
 export * from "./partners";
+

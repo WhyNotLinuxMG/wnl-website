@@ -1,8 +1,8 @@
 
-import Logo from '../ressources/logos_linux-tux.svg'
-import Drop from './Drop'
-import NavItem from './NavItem'
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Logo from '../ressources/logos_linux-tux.svg';
+import Drop from './Drop';
+import NavItem from './NavItem';
 
 const Nav = () => {
     const [navSize, setnavSize] = useState("10rem");
@@ -44,8 +44,8 @@ const Nav = () => {
                     </span>
                     <span className="w-6 h-1 bg-white mb-1">
                     </span>
-                </button>
-            <button type="button" className="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2">inscription</button>
+            </button>
+            <button type="button" className="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2">Inscription</button>
         </div>
 
     </header>
