@@ -49,6 +49,7 @@ text-align: left;
     height: 424px;
     overflow: hidden;
 
+
 }
 
 .contrib-container>img {
@@ -62,4 +63,5 @@ text-align: left;
     position: absolute;
     width: 0px;
     height: 0px;
+
 }
