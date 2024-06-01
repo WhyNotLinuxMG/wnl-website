@@ -6,7 +6,7 @@ export default function Associate({ associate, ind }) {
         loading="lazy"
         src={associate.image}
         alt={associate.nom}
-        className=" max-w-64 h-24 object-contain block "
+        className=" lg:max-w-64 lg:h-24 max-w-48 h-48 object-contain block "
       />
     </li>
   );

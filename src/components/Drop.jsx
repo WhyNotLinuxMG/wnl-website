@@ -1,18 +1,21 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Drop() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5  font-DMMono text-white hidden  sm:flex">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5  font-DMMono text-white  sm:flex">
           Activités
-          <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+          <ChevronDownIcon
+            className="-mr-1 h-5 w-5 text-gray-400"
+            aria-hidden="true"
+          />
         </Menu.Button>
       </div>
 
@@ -32,8 +35,8 @@ export default function Drop() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm font-DMMono'
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm font-DMMono"
                   )}
                 >
                   Account settings
@@ -45,8 +48,8 @@ export default function Drop() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm font-DMMono'
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm font-DMMono"
                   )}
                 >
                   Support
@@ -58,8 +61,8 @@ export default function Drop() {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm font-DMMono'
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm font-DMMono"
                   )}
                 >
                   License
@@ -72,8 +75,8 @@ export default function Drop() {
                   <button
                     type="submit"
                     className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block w-full px-4 py-2 text-left text-sm font-DMMono'
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block w-full px-4 py-2 text-left text-sm font-DMMono"
                     )}
                   >
                     Sign out
@@ -85,5 +88,5 @@ export default function Drop() {
         </Menu.Items>
       </Transition>
     </Menu>
-  )
+  );
 }
