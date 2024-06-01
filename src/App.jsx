@@ -8,9 +8,7 @@ import "./styles/App.css";
 
 import CountDownDay from "./scenes/CountDownDay";
 import OrganizersPartners from "./scenes/OrganizersPartners";
-import Stat from "./scenes/Stat";
 
-import Challenges from "./scenes/Challenges";
 import Footer from "./scenes/Footer";
 import GetTicket from "./scenes/GetTicket";
 import Photos from "./scenes/Photos";
@@ -31,13 +29,11 @@ const App = () => {
           <Stande />
           <Statistiques />
           <Comptetion />
-          <Stat />
-          <Challenges />
           <Photos />
           <Questions />
-          <GetTicket />
-          <Footer />
         </div>
+        <GetTicket />
+        <Footer />
       </div>
     </>
   );

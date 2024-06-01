@@ -1,5 +1,6 @@
 .top-section {
-    background: linear-gradient(31deg, #020F13, #02141D, #003566);
+    background: #0057a8;
+    background: linear-gradient(207deg, #04315c 0%, rgb(1, 15, 22) 100%);
 }
 
 
@@ -27,10 +28,15 @@
     font-size: 20px;
     text-decoration: none;
 }
-.backtitle{
+/* .backtitle{
 font-size: 98px;
 font-weight: 400;
 line-height: 115.84px;
 text-align: left;
 
+} */
+
+.gradientBg{
+    background: rgb(2,15,19);
+    background: linear-gradient(61deg, rgba(2,15,19,1) 0%, rgba(17,86,166,1) 100%);
 }
