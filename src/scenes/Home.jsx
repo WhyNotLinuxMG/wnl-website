@@ -1,42 +1,14 @@
 
-import Qr from "../assets/images/qr.png";
-import Button from "../components/Button";
-import ButtonFill from "../components/ButtonFill";
-import GetTicketButton from "../components/GetTicketButton";
+
 import Nav from "../components/nav";
 import Hero from "../page/Hero";
 const Home = () => {
   return (
-    <div className="top-section">
-
-      <div className="flex flex-col justify-between items-center md:items-stretch">
-        <Nav />
-        <div className="max-w-7xl mx-12">
-          <div className="pt-28 flex flex-col md:items-end md:justify-between">
-            {/* for mobile device  */}
-            <div className="w-full md:w-1/2 md:hidden">
-              <div className="text-center md:text-left flex items-center justify-center flex-col md">
-                <ButtonFill content="22 juin 2024" />
-                <h2 className="font-kontes text-white text-[42px] md:text-[90px]">
-                  Empowering <br className="md:hidden" /> Communities Through <br />{" "}
-                  <span className="text-raven">Open Source.</span>
-                </h2>
-                <p className="font-DMMono text-white max-w-xl text-[14px] md:text-[20px] mt-4">
-                  Explorez le pouvoir transformateur de Linux. Rejoignez-nous pour
-                  découvrir son potentiel illimité lors de cet évènement incontournable.
-                </p>
-                <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
-                  <GetTicketButton />
-                  <Button content="Devenir sponsor" />
-                </div>
-              </div>
-            </div>
-            <Hero />
-
-          </div>
-        </div>
-      </div>
-    </div>
+    <main className="top-section dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
+      <Nav />
+      <Hero />
+     
+    </main>
   );
 };
 
