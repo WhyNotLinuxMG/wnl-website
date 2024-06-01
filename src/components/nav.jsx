@@ -16,6 +16,16 @@ const Nav = () => {
     }
   };
 
+  const handleBurgerClick = () => {
+    if (isBurgerOpen) {
+      setIsBurgerOpen(false);
+      setnavSize("10rem");
+    } else {
+      setIsBurgerOpen(true);
+      setnavSize("auto");
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("resize", handleClosingBurger, false);
     return () => {
@@ -45,24 +55,18 @@ const Nav = () => {
 
   return (
     <header
-      className={`flex fixed w-full top-0 left-0 z-50 lg:px-5 px-4 py-5 border-raven
+      className={`flex fixed w-full top-0 left-0 z-50 lg:px-5 px-4 py-5 border-raven transition-[height_1s_linear] duration-1000
        ${
          isBurgerOpen
            ? "flex-col top-section"
            : "flex-row items-center justify-between"
        }`}
-      style={
-        !isBurgerOpen
-          ? {
-              backgroundColor: navColor,
-              height: navSize,
-              borderBottomWidth: borderWidth,
-              transition: "all 0.7s ease-in-out",
-            }
-          : {
-              //   transition: "all 1s",
-            }
-      }
+      style={{
+        backgroundColor: navColor,
+        height: navSize,
+        borderBottomWidth: borderWidth,
+        transition: "all 0.7s ease-in-out",
+      }}
     >
       {/* LOGO */}
       <div className="flex lg:w-auto w-full lg:block justify-between items-center">
@@ -70,19 +74,35 @@ const Nav = () => {
           <div className="mr-3">
             <img src={Logo} className=" w-12 lg:w-16 h-auto" />
           </div>
-          <div className=" h-6 text-3xl text-white text-center  Kontes-Compressed sm:block">
+          <div className=" h-6 text-2xl lg:text-3xl text-white text-center  Kontes-Compressed sm:block">
             Why not <span className="color-yellow-sea">Linux</span>
           </div>
         </div>
 
         {/* BURGER BUTTON FOR SMALL SCREEN */}
         <button
-          className="lg:hidden flex flex-col"
-          onClick={() => setIsBurgerOpen(!isBurgerOpen)}
+          className="lg:hidden flex flex-col relative"
+          onClick={() => handleBurgerClick()}
         >
-          <span className="w-6 h-1 bg-white mb-1"></span>
-          <span className="w-6 h-1 bg-white mb-1"></span>
-          <span className="w-6 h-1 bg-white mb-1"></span>
+          <span
+            className={`w-6 h-1 bg-white mb-1 transition-[transform_0.5s] duration-500 ${
+              isBurgerOpen
+                ? " -translate-x-1/2 rotate-45 absolute -translate-y-1/2 top-1/2 left-1/2"
+                : ""
+            }`}
+          ></span>
+          <span
+            className={`w-6 h-1 bg-white mb-1 transition-opacity ${
+              isBurgerOpen ? "opacity-0" : " delay-100"
+            }`}
+          ></span>
+          <span
+            className={`w-6 h-1 bg-white mb-1 transition-[tranform_0.7s] duration-700 ${
+              isBurgerOpen
+                ? " -translate-x-1/2 -rotate-45 bg-red-300 absolute -translate-y-1/2 top-1/2 left-1/2 "
+                : ""
+            }`}
+          ></span>
         </button>
       </div>
 
@@ -90,8 +110,8 @@ const Nav = () => {
       <div
         className={`lg:flex items-center leading-5 gap-10  ${
           isBurgerOpen
-            ? "flex flex-col justify-start space-y-5 h-full py-10 top-11"
-            : "hidden -top-10 opacity-0"
+            ? "flex flex-col justify-start space-y-5 h-full py-10 top-11 "
+            : "hidden -top-10"
         }`}
       >
         <NavItem>À propos</NavItem>
