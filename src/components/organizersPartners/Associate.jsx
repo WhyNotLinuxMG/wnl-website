@@ -1,12 +1,12 @@
 export default function Associate({ associate, ind }) {
   return (
-    <li key={ind} className="m-8">
+    <li key={ind} className="lg:m-8 m-4">
       <img
         draggable="false"
         loading="lazy"
         src={associate.image}
         alt={associate.nom}
-        className=" lg:max-w-64 lg:h-24 max-w-48 h-48 object-contain block "
+        className="max-w-64 h-24 object-contain block "
       />
     </li>
   );
