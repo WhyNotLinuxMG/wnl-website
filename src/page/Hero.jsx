@@ -26,9 +26,10 @@ const Hero = () => {
                         <img src={QR} alt="qr" width={200} />
                     </div>
                 </div>
+                
             </div>
 
-            <div className="max-w-7xl mx-12">
+            <div className="max-w-7xl mx-12 md:hidden">
                 <div className="pt-28 flex flex-col md:items-end md:justify-between">
                     {/* for mobile device  */}
                     <div className="w-full md:w-1/2 md:hidden">
