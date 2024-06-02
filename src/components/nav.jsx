@@ -1,4 +1,5 @@
 import Logo from "../ressources/logos_linux-tux.svg";
+import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
 import NavItem from "./NavItem";
 import React, { useState, useEffect } from "react";
@@ -74,9 +75,7 @@ const Nav = () => {
           <div className="mr-3">
             <img src={Logo} className=" w-12 lg:w-16 h-auto" />
           </div>
-          <div className=" h-6 text-2xl lg:text-3xl text-white text-center  Kontes-Compressed sm:block">
-            Why not <span className="color-yellow-sea">Linux</span>
-          </div>
+          <TextOfLogo/>
         </div>
 
         {/* BURGER BUTTON FOR SMALL SCREEN */}
