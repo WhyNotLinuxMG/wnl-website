@@ -7,10 +7,10 @@
 
 
 .Kontes-Compressed{
-    font-family: "Kontes-Compressed";
+    font-family: "Kontes-Compressed", sans-serif;
 }
 .Kontes-Compressed-Bold{
-    font-family: "Kontes-CompressedBold";
+    font-family: "Kontes-CompressedBold", sans-serif;
 }
 
 .color-yellow-sea {
@@ -24,7 +24,7 @@
 .nav-list {
     color: #fff;
     font-weight: 400;
-    font-family: "DMMono-Light";
+    font-family: "DMMono-Light", sans-serif;
     font-size: 20px;
     text-decoration: none;
 }

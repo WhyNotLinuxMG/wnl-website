@@ -15,7 +15,6 @@ import GetTicket from './scenes/GetTicket'
 import Photos from './scenes/Photos'
 import Questions from './scenes/Questions'
 import About from './scenes/About'
-
 const App = () => {
   const WNL = new Date("June 22, 2024").getTime();
   return (
@@ -23,20 +22,22 @@ const App = () => {
       <Home />
       <div className="bg-background">
         <div className="mx-auto max-w-[1600px]  ">
-          <CountDownDay WNL={WNL}/>
-          <OrganizersPartners/>
-          <About/>
-          <Conferences/>
-          <Stande/>
-          <Statistiques/>
-          <Comptetion/>
-          <Photos/>
-          <Questions/>
-        </div>     
-          <GetTicket/>
-          <Footer/>
+          <CountDownDay WNL={WNL} />
+          <OrganizersPartners />
+          <About />
+          <Conferences />
+          <Stande />
+          <Statistiques />
+          <Comptetion />
+          <Photos />
+          <Questions />
+        </div>
+        <GetTicket />
+        <Footer />
 
       </div>
+
+      
     </>
   )
 }
