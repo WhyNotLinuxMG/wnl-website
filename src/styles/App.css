@@ -1,24 +1,24 @@
 .top-section {
-    background: #0057a8;
-    background: linear-gradient(207deg, #04315c 0%, rgb(1, 15, 22) 100%);
+  background: #0057a8;
+  background: linear-gradient(207deg, #04315c 0%, rgb(1, 15, 22) 100%);
 }
-
-
 
 
 .Kontes-Compressed{
     font-family: "Kontes-Compressed", sans-serif;
 }
+
+
 .Kontes-Compressed-Bold{
     font-family: "Kontes-CompressedBold", sans-serif;
 }
 
-.color-yellow-sea {
-    color: #EEA736;
-}
 
-.color-raven{
-    color: #6C757D;
+.color-yellow-sea {
+  color: #eea736;
+}
+.color-raven { 
+  color: #6c757d;
 }
 
 .nav-list {
@@ -28,6 +28,7 @@
     font-size: 20px;
     text-decoration: none;
 }
+
 /* .backtitle{
 font-size: 98px;
 font-weight: 400;
@@ -36,7 +37,32 @@ text-align: left;
 
 } */
 
-.gradientBg{
-    background: rgb(2,15,19);
-    background: linear-gradient(61deg, rgba(2,15,19,1) 0%, rgba(17,86,166,1) 100%);
+.gradientBg {
+    background: rgb(2, 15, 19);
+    background: linear-gradient(61deg, rgba(2, 15, 19, 1) 0%, rgba(17, 86, 166, 1) 100%);
+  
 }
+
+.contrib-container {
+    filter: url('#flt_tag');
+    width: 282px;
+    height: 424px;
+    overflow: hidden;
+
+
+}
+
+.contrib-container>img {
+    margin: 0 auto;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 20%, 100% 100%, 0% 100%);
+
+}
+
+.flt_svg {
+    visibility: hidden;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+
+}
+
