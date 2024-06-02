@@ -1,5 +1,4 @@
 
-import Vector from '../assets/images/Vector.png';
 import QR from '../assets/images/qr_code.png';
 import ButtonFill from "../components/ButtonFill";
 import Button from "../components/Button";

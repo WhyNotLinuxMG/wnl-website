@@ -6,7 +6,7 @@ import Associate from "../components/organizersPartners/Associate";
 //ORGANISATEURS ET PARTENAIRES
 function OrganizersPartners() {
   return (
-    <section className=" bg-background py-[7.5rem] lg:px-20 font-DMMono">
+    <section className=" bg-background py-[7.5rem] lg:px-20 font-DMMono" id='section2'>
       {/* SEPARATOR */}
       <div className=" mx-auto md:h-3 h-2 mb-16 box-border border-dashed border-y-2 opacity-10 text-raven "></div>
       {/*ORGANISATEURS*/}
