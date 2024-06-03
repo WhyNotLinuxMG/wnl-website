@@ -25,7 +25,7 @@ const CountDownDay = ({ WNL }) => {
   }, [WNL]);
 
   return (
-    <div className='pt-5 flex items-center justify-center flex-col'>
+    <div className='pt-5 flex items-center justify-center flex-col ' id="section1">
       <div className='flex flex-col items-center'>
         <h2 className='text-[90px] md:text-[218px] font-kontes text-ebony pt-[3rem]'>WNL 2.0</h2>
         <div className=''>

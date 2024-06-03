@@ -1,10 +1,23 @@
 
-import Vector from '../assets/images/Vector.png';
 import QR from '../assets/images/qr_code.png';
 import ButtonFill from "../components/ButtonFill";
 import Button from "../components/Button";
 import GetTicketButton from "../components/GetTicketButton";
+import { useEffect,useState } from 'react';
+
 const Hero = () => {
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+      // Lancer l'animation après que le composant est monté
+      setIsAnimating(true);
+      const timer = setTimeout(() => {
+        setIsAnimating(false);
+      }, 2000); // La durée de l'animation doit correspondre à celle définie en CSS (2s)
+  
+      // Nettoyage
+      return () => clearTimeout(timer);
+    }, []);
     return (
         <>
             <div className="grid mt-4 max-w-[1600px] mx-auto px-4 py-8 mx-auto items-center lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full hidden md:grid">
@@ -23,12 +36,13 @@ const Hero = () => {
                     </div>
 
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:inline-flex items-end justify-end ">
-                        <img src={QR} alt="qr" width={200} />
+                        <img src={QR} className={isAnimating ? 'image-rotate' : ''} alt="qr" width={200} />
                     </div>
                 </div>
+                
             </div>
 
-            <div className="max-w-7xl mx-12">
+            <div className="max-w-7xl mx-12 md:hidden">
                 <div className="pt-28 flex flex-col md:items-end md:justify-between">
                     {/* for mobile device  */}
                     <div className="w-full md:w-1/2 md:hidden">
