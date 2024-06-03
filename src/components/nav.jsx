@@ -109,10 +109,10 @@ const Nav = () => {
           isBurgerOpen ? "space-y-5 h-full py-10 flex " : "hidden"
         }`}
       >
-        <NavItem>À propos</NavItem>
+        <NavItem gotolink="#about">À propos</NavItem>
         <Drop />
-        <NavItem>Archive</NavItem>
-        <NavItem>FaQ</NavItem>
+        <NavItem gotolink="#archive">Archives</NavItem>
+        <NavItem gotolink="#faq">FaQ</NavItem>
 
         <button
           type="button"
