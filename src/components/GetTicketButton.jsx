@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 function GetTicketButton() {
   return (
     <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       className="bg-white font-DMMono rounded-md mb-3 w-full max-w-xs h-14 flex items-center justify-center px-4 py-2 sm:w-auto mr-5"
       aria-label="Get a ticket"
     >
