@@ -2,13 +2,13 @@ import Logo from "../ressources/logos_linux-tux.svg";
 import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
 import NavItem from "./NavItem";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 const Nav = () => {
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
   const [navPaddingY, setNavPaddingY] = useState("0.75rem");
   const [borderWidth, setBorderWidth] = useState("0px");
-  const nav = useRef(null);
+  const [scrolleDownStyle, setScrolleDownStyle] = useState(false);
 
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
@@ -32,18 +32,27 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleClosingBurger, false);
+    document.querySelectorAll(".link").forEach((link) => {
+      link.addEventListener("click", () => setIsBurgerOpen(false));
+    });
     return () => {
       window.removeEventListener("resize", handleClosingBurger);
+      document.querySelectorAll(".link").forEach((link) => {
+        link.removeEventListener("click", () => setIsBurgerOpen(false));
+      });
     };
   }, []);
 
   const listenScrollEvent = () => {
     window.scrollY > 10
-      ? (setnavColor("#020F13"), setBorderWidth("1px"))
-      : (setnavColor("transparent"), setBorderWidth("0px"));
+      ? setScrolleDownStyle(true)
+      : setScrolleDownStyle(false);
     window.scrollY > 10
       ? (setnavSize("5rem"), setNavPaddingY("1rem"))
       : (setnavSize("10rem"), setNavPaddingY("1.25rem"));
+    window.scrollY > 10
+      ? (setnavColor("#020F13"), setBorderWidth("1px"))
+      : (setnavColor("transparent"), setBorderWidth("0px"));
   };
 
   useEffect(() => {
@@ -55,7 +64,6 @@ const Nav = () => {
 
   return (
     <header
-      ref={nav}
       className={`flex font-DMMono capitalize lg:flex-row lg:items-center transition-[height_2s_ease-in-out] duration-700 lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-4 lg:py-5 border-raven
        ${isBurgerOpen ? "top-section justify-start h-[70vh] py-3" : ""}`}
       style={
@@ -109,7 +117,7 @@ const Nav = () => {
 
       {/* MENU FOR LARGE SCREEN AND WHEN BURGER IS OPEN FOR SMALL SCREEN */}
       <div
-        className={`lg:flex lg:h-auto lg:flex-row flex-col  items-center leading-5 gap-10 overflow-hidden ${
+        className={`lg:flex  p-2 lg:flex-row flex-col  items-center leading-5 gap-10 overflow-hidden ${
           isBurgerOpen ? "space-y-5 h-full py-10 flex " : "hidden"
         }`}
       >
@@ -120,7 +128,12 @@ const Nav = () => {
 
         <button
           type="button"
-          className={`${btnColor} font-DMMono hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2`}
+          className={`${btnColor} font-DMMono bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none
+           focus:ring-[#050708]/50 font-medium
+           rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50
+            dark:hover:bg-[#050708]/30 me-2 mb-2
+                      ${scrolleDownStyle ? "lg:border lg:border-white" : ""}
+`}
         >
           Inscription
         </button>
