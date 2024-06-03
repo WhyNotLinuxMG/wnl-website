@@ -4,7 +4,7 @@ import ButtonFill from "../components/ButtonFill";
 
 function About() {
   return (
-    <div className="w-full" id="about">
+    <div className="w-full pt-32" id="about">
       <div className="w-full h-[90vh] relative">
         <img
           src={About1}

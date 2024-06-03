@@ -2,7 +2,7 @@ import React from "react";
 import PhotoSlider from "../components/PhotoSlider";
 const Photos = () => {
   return (
-    <div id="archive" className="border pt-32">
+    <div id="archives" className="pt-32">
       <div className="flex flex-col items-center justify-center">
         <h2 className="text-[32px] md:text-[58px] text-white font-kontes uppercase ">
           retour en <span className="text-yellow">Photos</span>

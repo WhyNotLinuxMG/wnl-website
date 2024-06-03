@@ -6,7 +6,7 @@ function NavItem({ className = "link", children, gotolink = "#" }) {
   // );
 
   return (
-    <a href="#" className={`font-DMMono text-white ${className}`}>
+    <a href={gotolink} className={`font-DMMono text-white ${className}`}>
       {children}
     </a>
   );

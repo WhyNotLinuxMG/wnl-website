@@ -26,7 +26,7 @@ const Nav = () => {
       window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
     } else {
       setIsBurgerOpen(true);
-      setnavSize("70vh");
+      // setnavSize("70vh");
     }
   };
 
@@ -56,16 +56,20 @@ const Nav = () => {
   return (
     <header
       ref={nav}
-      className={`flex font-DMMono capitalize lg:flex-row lg:items-center lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-4 lg:py-5 border-raven
-       ${isBurgerOpen ? "top-section justify-start " : ""}`}
-      style={{
-        backgroundColor: navColor,
-        height: navSize,
-        paddingTop: navPaddingY,
-        paddingBottom: navPaddingY,
-        borderBottomWidth: borderWidth,
-        transition: "all 0.7s ease-in-out",
-      }}
+      className={`flex font-DMMono capitalize lg:flex-row lg:items-center transition-[height_2s_ease-in-out] duration-700 lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-4 lg:py-5 border-raven
+       ${isBurgerOpen ? "top-section justify-start h-[70vh] py-3" : ""}`}
+      style={
+        !isBurgerOpen
+          ? {
+              backgroundColor: navColor,
+              height: navSize,
+              paddingTop: navPaddingY,
+              paddingBottom: navPaddingY,
+              borderBottomWidth: borderWidth,
+              // transition: "all 0.7s ease-in-out",
+            }
+          : {}
+      }
     >
       {/* LOGO */}
       <div className="flex lg:w-auto w-full lg:block justify-between items-center ">
@@ -111,7 +115,7 @@ const Nav = () => {
       >
         <NavItem gotolink="#about">À propos</NavItem>
         <Drop />
-        <NavItem gotolink="#archive">Archives</NavItem>
+        <NavItem gotolink="#archives">Archives</NavItem>
         <NavItem gotolink="#faq">FaQ</NavItem>
 
         <button
