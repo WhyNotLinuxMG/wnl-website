@@ -25,7 +25,7 @@ const Hero = () => {
                     <div className='mr-auto place-self-center lg:col-span-7 '>
                         <ButtonFill content="22 Juin 2024" />
                         <div className="backtitle">
-                            <h1 className="max-w-2xl mb-4 text-[38px] md:text-[78px] Kontes-Compressed-Bold font-extrabold tracking-tight leading-none xl:text-7xl text-white">Empowering Communities</h1>
+                            <h1 className="Kontes-Compressed-Bold text-[38px] md:text-[78px] text-white pl-3 md:pl-0">Empowering Communities</h1>
                             <h1 className='Kontes-Compressed-Bold text-[38px] md:text-[78px] text-white pl-3 md:pl-0'>Through <span className="color-raven">Open Source</span></h1>
                         </div>
                         <p className="max-w-2xl mb-6 text-white lg:mb-8 md:text-lg lg:text-xl font-DMMono ">Explorez le pouvoir transformateur de Linux. Rejoignez-nous pour découvrir son potentiel illimité lors de cet évènement incontournable..</p>
