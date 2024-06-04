@@ -7,6 +7,7 @@ import NirinaDoris from "../assets/images/contributeurs/nini.jpg";
 import Rivo from "../assets/images/contributeurs/rivo.jpeg";
 import Damia from "../assets/images/contributeurs/damia.jpg";
 import Aina from "../assets/images/contributeurs/ainaMc.jpeg";
+import Arleme from "../assets/images/contributeurs/arleme.jpeg";
 
 export const contributors = [
   {
@@ -21,7 +22,7 @@ export const contributors = [
   },
   {
     nom: "Gaetan Jonathan BAKARY",
-    fonction: "fonction",
+    fonction: "Développeur",
     image: Gaetan,
   },
   {
@@ -41,17 +42,22 @@ export const contributors = [
   },
   {
     nom: "Rivo Lalaina",
-    fonction: "fonction",
+    fonction: "Développeur",
     image: Rivo,
   },
   {
     nom: "Damia Tsiafaratiana",
-    fonction: "fonction",
+    fonction: "Développeur",
     image: Damia,
   },
   {
     nom: "Aina Razafindratsiza",
     fonction: "Développeur",
     image: Aina,
+  },
+  {
+    nom: "Arlème Johnson",
+    fonction: "Développeur",
+    image: Arleme,
   },
 ];
