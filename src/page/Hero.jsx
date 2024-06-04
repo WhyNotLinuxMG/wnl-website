@@ -1,10 +1,23 @@
 
-import Vector from '../assets/images/Vector.png';
 import QR from '../assets/images/qr_code.png';
 import ButtonFill from "../components/ButtonFill";
 import Button from "../components/Button";
 import GetTicketButton from "../components/GetTicketButton";
+import { useEffect,useState } from 'react';
+
 const Hero = () => {
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+      // Lancer l'animation après que le composant est monté
+      setIsAnimating(true);
+      const timer = setTimeout(() => {
+        setIsAnimating(false);
+      }, 2000); // La durée de l'animation doit correspondre à celle définie en CSS (2s)
+  
+      // Nettoyage
+      return () => clearTimeout(timer);
+    }, []);
     return (
         <>
             <div className="grid mt-4 max-w-[1600px] mx-auto px-4 py-8 mx-auto items-center lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full hidden md:grid">
@@ -16,7 +29,6 @@ const Hero = () => {
                             <h1 className='Kontes-Compressed-Bold text-[38px] md:text-[78px] text-white pl-3 md:pl-0'>Through <span className="color-raven">Open Source</span></h1>
                         </div>
                         <p className="max-w-2xl mb-6 text-white lg:mb-8 md:text-lg lg:text-xl font-DMMono ">Explorez le pouvoir transformateur de Linux. Rejoignez-nous pour découvrir son potentiel illimité lors de cet évènement incontournable..</p>
-            
                         <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
                             <GetTicketButton />
                             <Button content="Devenir sponsor" />
@@ -24,12 +36,13 @@ const Hero = () => {
                     </div>
 
                     <div className="hidden lg:mt-0 lg:col-span-5 lg:inline-flex items-end justify-end ">
-                        <img src={QR} alt="qr" width={200} />
+                        <img src={QR} className={isAnimating ? 'image-rotate' : ''} alt="qr" width={200} />
                     </div>
                 </div>
+                
             </div>
 
-            <div className="max-w-7xl mx-12">
+            <div className="max-w-7xl mx-12 md:hidden">
                 <div className="pt-28 flex flex-col md:items-end md:justify-between">
                     {/* for mobile device  */}
                     <div className="w-full md:w-1/2 md:hidden">
