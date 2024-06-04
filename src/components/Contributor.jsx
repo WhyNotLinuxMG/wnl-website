@@ -38,8 +38,8 @@ function Contributor_card({ nom, fonction, image }) {
         <>
             <div className='contrib-container relative mx-3 h-[424px] w-[282px] '>
                 <img src={image} className="w-full h-full object-cover   " />
-                <div className='w-full h-1/4 bg-gradient-to-b from-[#25252506] via-[#000000d1] to-black  absolute bottom-0 p-4'>
-                    <div className=' font-DMMono text-slate-200 text-lg'>{nom}</div>
+                <div className='w-full h-1/4 bg-gradient-to-b from-[#25252506] via-[#000000d1] to-black  absolute bottom-0 px-4'>
+                    <div className=' font-DMMono flex items-end text-slate-200 text-lg h-16'>{nom}</div>
                     <div className='font-DMMono text-[#8f8f8fd4] text-lg'>{fonction}</div>
                 </div>
                 <svg class="flt_svg" xmlns="http://www.w3.org/2000/svg">
