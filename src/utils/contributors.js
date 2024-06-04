@@ -1,45 +1,63 @@
-import Conf1 from "../assets/images/conf1.png";
-import Conf2 from "../assets/images/conf2.png";
-import Conf3 from "../assets/images/conf3.png";
-import Conf4 from "../assets/images/conf4.png";
-import Conf5 from "../assets/images/conf5.png";
-import Conf6 from "../assets/images/conf6.png";
-import Conf7 from "../assets/images/conf7.png";
+import Ntsoa from "../assets/images/contributeurs/ntsoa.jpeg";
+import Kezia from "../assets/images/contributeurs/kezia.jpg";
+import Gaetan from "../assets/images/contributeurs/gaetan.jpeg";
+import Ainafinaritra from "../assets/images/contributeurs/ainafinaritra.png";
+import Nerson from "../assets/images/contributeurs/nerson.jpeg";
+import NirinaDoris from "../assets/images/contributeurs/nini.jpg";
+import Rivo from "../assets/images/contributeurs/rivo.jpeg";
+import Damia from "../assets/images/contributeurs/damia.jpg";
+import Aina from "../assets/images/contributeurs/ainaMc.jpeg";
+import Arleme from "../assets/images/contributeurs/arleme.jpeg";
 
 export const contributors = [
   {
-    nom: "Kezia Fanomezantsoa",
-    fonction: "UI/UX Designer",
-    image: Conf1,
+    nom: "Manambintsoa MIHAINGOHERILANTO",
+    fonction: "Lead Développeur",
+    image: Ntsoa,
   },
   {
     nom: "Kezia Fanomezantsoa",
     fonction: "UI/UX Designer",
-    image: Conf2,
+    image: Kezia,
   },
   {
-    nom: "Kezia Fanomezantsoa",
-    fonction: "UI/UX Designer",
-    image: Conf3,
+    nom: "Gaetan Jonathan BAKARY",
+    fonction: "Développeur",
+    image: Gaetan,
   },
   {
-    nom: "Kezia Fanomezantsoa",
-    fonction: "UI/UX Designer",
-    image: Conf4,
+    nom: "Aina Finaritra",
+    fonction: "Front-end Développeur",
+    image: Ainafinaritra,
   },
   {
-    nom: "Kezia Fanomezantsoa",
-    fonction: "UI/UX Designer",
-    image: Conf5,
+    nom: "Nirina Doris Sylvie",
+    fonction: "Développeur",
+    image: NirinaDoris,
   },
   {
-    nom: "Kezia Fanomezantsoa",
-    fonction: "UI/UX Designer",
-    image: Conf6,
+    nom: "Njakarimanana Nerson",
+    fonction: "Développeur",
+    image: Nerson,
   },
   {
-    nom: "Kezia Fanomezantsoa",
-    fonction: "UI/UX Designer",
-    image: Conf7,
+    nom: "Rivo Lalaina",
+    fonction: "Développeur",
+    image: Rivo,
+  },
+  {
+    nom: "Damia Tsiafaratiana",
+    fonction: "Développeur",
+    image: Damia,
+  },
+  {
+    nom: "Aina Razafindratsiza",
+    fonction: "Développeur",
+    image: Aina,
+  },
+  {
+    nom: "Arlème Johnson",
+    fonction: "Développeur",
+    image: Arleme,
   },
 ];
