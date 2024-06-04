@@ -65,7 +65,9 @@ const Nav = () => {
   return (
     <header
       className={`flex font-DMMono capitalize lg:flex-row lg:items-center transition-[height_2s_ease-in-out] duration-700 lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-4 lg:py-5 border-raven
-       ${isBurgerOpen ? "top-section justify-start h-[70vh] py-3" : ""}`}
+       ${
+         isBurgerOpen ? "top-section justify-start h-[70vh] py-3 gap-y-9" : ""
+       }`}
       style={
         !isBurgerOpen
           ? {
@@ -117,7 +119,7 @@ const Nav = () => {
 
       {/* MENU FOR LARGE SCREEN AND WHEN BURGER IS OPEN FOR SMALL SCREEN */}
       <div
-        className={`lg:flex  p-2 lg:flex-row flex-col  items-center leading-5 gap-10 overflow-hidden ${
+        className={`lg:flex  p-2 lg:flex-row flex-col  items-center leading-5 gap-8 overflow-hidden ${
           isBurgerOpen ? "space-y-5 h-full py-10 flex " : "hidden"
         }`}
       >
