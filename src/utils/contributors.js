@@ -1,11 +1,12 @@
 import Ntsoa from "../assets/images/contributeurs/ntsoa.jpeg";
 import Kezia from "../assets/images/contributeurs/kezia.jpg";
 import Gaetan from "../assets/images/contributeurs/gaetan.jpeg";
-// import Ainafinaritra from "../assets/images/contributeurs/ainafinaritra.jpeg";
+import Ainafinaritra from "../assets/images/contributeurs/ainafinaritra.png";
 import Nerson from "../assets/images/contributeurs/nerson.jpeg";
 import NirinaDoris from "../assets/images/contributeurs/nini.jpg";
-import Arleme from "../assets/images/contributeurs/arleme.jpeg";
+import Rivo from "../assets/images/contributeurs/rivo.jpeg";
 import Damia from "../assets/images/contributeurs/damia.jpg";
+import Aina from "../assets/images/contributeurs/ainaMc.jpeg";
 
 export const contributors = [
   {
@@ -20,35 +21,37 @@ export const contributors = [
   },
   {
     nom: "Gaetan Jonathan BAKARY",
-    fonction: "fonction?",
+    fonction: "fonction",
     image: Gaetan,
   },
   {
     nom: "Aina Finaritra",
-    fonction: "UI/UX Designer",
-    image: Arleme,
+    fonction: "Front-end Développeur",
+    image: Ainafinaritra,
   },
   {
     nom: "Nirina Doris Sylvie",
-    fonction: "Front-end Développeur",
+    fonction: "Développeur",
     image: NirinaDoris,
   },
   {
     nom: "Njakarimanana Nerson",
-    fonction: "UI/UX Designer",
+    fonction: "Développeur",
     image: Nerson,
   },
   {
     nom: "Rivo Lalaina",
-    fonction: "UI/UX Designer",
-    image: Arleme,
+    fonction: "fonction",
+    image: Rivo,
   },
   {
     nom: "Damia Tsiafaratiana",
-    fonction: "UI/UX Designer",
+    fonction: "fonction",
     image: Damia,
   },
-  // {
-  //   nom: "Arlème Johnson",
-  // },
+  {
+    nom: "Aina Razafindratsiza",
+    fonction: "Développeur",
+    image: Aina,
+  },
 ];
