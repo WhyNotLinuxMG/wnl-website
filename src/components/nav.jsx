@@ -111,7 +111,7 @@ const Nav = () => {
           }`}
       >
         
-        <NavItem >À propos</NavItem>
+        <NavItem to="/about">À propos</NavItem>
         <Drop />
         <NavItem>Archive</NavItem>
         <NavItem>FaQ</NavItem>
