@@ -6,7 +6,7 @@ import Nerson from "../assets/images/contributeurs/nerson.jpeg";
 import NirinaDoris from "../assets/images/contributeurs/nini.jpg";
 import Rivo from "../assets/images/contributeurs/rivo.jpeg";
 import Damia from "../assets/images/contributeurs/damia.jpg";
-import Aina from "../assets/images/contributeurs/ainaMc.jpeg";
+import Aina from "../assets/images/contributeurs/ainaMc.jpg";
 import Arleme from "../assets/images/contributeurs/arleme.jpeg";
 
 export const contributors = [
@@ -51,7 +51,7 @@ export const contributors = [
     image: Damia,
   },
   {
-    nom: "Aina Razafindratsiza",
+    nom: "Razafindratsiza Tsantan'ny Aina",
     fonction: "Développeur",
     image: Aina,
   },
