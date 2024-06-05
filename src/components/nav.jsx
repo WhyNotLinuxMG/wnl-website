@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import Logo from "../ressources/logos_linux-tux.svg";
 import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
@@ -37,7 +38,7 @@ const Nav = () => {
 
   const listenScrollEvent = () => {
     window.scrollY > 10
-      ? (setnavColor("#020F13"), setBorderWidth("1px"),setBtnColor('bg-white text-dark'))
+      ? (setnavColor("#020F13"), setBorderWidth("1px"), setBtnColor('bg-white text-dark'))
       : (setnavColor("transparent"), setBorderWidth("0px"), setBtnColor('bg-[#050708] text-white'));
     window.innerWidth >= 1024
       ? window.scrollY > 10
@@ -72,12 +73,16 @@ const Nav = () => {
     >
       {/* LOGO */}
       <div className="flex lg:w-auto w-full lg:block justify-between items-center">
-        <div className="flex items-center justify-between ">
-          <div className="mr-3">
-            <img src={Logo} className=" w-12 lg:w-16 h-auto" />
+        <Link to="hero" className="cursor-pointer"
+        smooth={true}
+        duration={500}>
+          <div className="flex items-center justify-between ">
+            <div className="mr-3">
+              <img src={Logo} className=" w-12 lg:w-16 h-auto" />
+            </div>
+            <TextOfLogo />
           </div>
-          <TextOfLogo />
-        </div>
+        </Link>
 
         {/* BURGER BUTTON FOR SMALL SCREEN */}
         <button
@@ -110,7 +115,7 @@ const Nav = () => {
           : "hidden -top-10"
           }`}
       >
-        
+
         <NavItem to="/about">À propos</NavItem>
         <Drop />
         <NavItem>Archive</NavItem>
