@@ -41,7 +41,7 @@ function Contributor_card({ nom, fonction, image }) {
           </div>
           <div className="font-DMMono text-[#8f8f8fd4] text-lg">{fonction}</div>
         </div>
-        <svg class="flt_svg" xmlns="http://www.w3.org/2000/svg">
+        <svg className="flt_svg" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <filter id="flt_tag">
               <feGaussianBlur

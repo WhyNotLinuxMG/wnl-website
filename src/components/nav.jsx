@@ -13,22 +13,25 @@ const Nav = () => {
 
   const [btnColor, setBtnColor] = useState("bg-[#050708] text-white");
 
+  //close opened burger when screen became large
   const handleClosingBurger = () => {
     if (window.innerWidth >= 1024) {
       setIsBurgerOpen(false);
     }
   };
 
+  //handle burger opening and closing
   const handleBurgerClick = () => {
     if (isBurgerOpen) {
       setIsBurgerOpen(false);
-      window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
+      window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
     } else {
       setIsBurgerOpen(true);
       // setnavSize("70vh");
     }
   };
 
+  //listen to burger menu click
   useEffect(() => {
     window.addEventListener("resize", handleClosingBurger, false);
     document.querySelectorAll(".link").forEach((link) => {
@@ -42,13 +45,25 @@ const Nav = () => {
     };
   }, []);
 
+  //change header properties at scroll event
   const listenScrollEvent = () => {
+    //set inverse the colo of sign in button when scrolling down
+    window.innerWidth > 1024
+      ? window.scrollY > 10
+        ? setBtnColor("bg-white text-dark")
+        : setBtnColor("bg-[#050708] text-white")
+      : setBtnColor("bg-[#050708] text-white");
+
+    //set height, bgcolor, padding and border when scrolling down
     window.scrollY > 10
-      ? (setnavSize("5rem"), setNavPaddingY("1rem"))
-      : (setnavSize("10rem"), setNavPaddingY("1.25rem"));
-    window.scrollY > 10
-      ? (setnavColor("#020F13"), setBorderWidth("1px"))
-      : (setnavColor("transparent"), setBorderWidth("0px"));
+      ? (setnavSize("6rem"),
+        setNavPaddingY("1.25rem"),
+        setnavColor("#020F13"),
+        setBorderWidth("1px"))
+      : (setnavSize("10rem"),
+        setNavPaddingY("0.75rem"),
+        setnavColor("transparent"),
+        setBorderWidth("0px"));
   };
 
   useEffect(() => {
@@ -60,9 +75,9 @@ const Nav = () => {
 
   return (
     <header
-      className={`flex font-DMMono capitalize lg:flex-row lg:items-center transition-[height_2s_ease-in-out] duration-700 lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-4 lg:py-5 border-raven
+      className={`flex font-DMMono capitalize lg:flex-row lg:items-center transition-[height_2s_ease-in-out] duration-700 lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-0 lg:py-5 border-raven
        ${
-         isBurgerOpen ? "top-section justify-start h-[70vh] py-3 gap-y-9" : ""
+         isBurgerOpen ? "top-section justify-start h-[65vh] py-3 gap-y-9" : ""
        }`}
       style={
         !isBurgerOpen
@@ -78,13 +93,13 @@ const Nav = () => {
       }
     >
       {/* LOGO */}
-      <div className="flex lg:w-auto w-full lg:block justify-between items-center ">
-        <div className="flex items-center justify-between ">
+      <div className="flex lg:w-auto w-full lg:block justify-between items-center px-4 lg:px-0">
+        <a className="flex items-center justify-between " href="#">
           <div className="mr-3">
             <img src={Logo} className=" w-12 lg:w-16 h-auto" />
           </div>
           <TextOfLogo />
-        </div>
+        </a>
 
         {/* BURGER BUTTON FOR SMALL SCREEN */}
         <button
@@ -115,14 +130,14 @@ const Nav = () => {
 
       {/* MENU FOR LARGE SCREEN AND WHEN BURGER IS OPEN FOR SMALL SCREEN */}
       <div
-        className={`lg:flex  p-2 lg:flex-row flex-col  items-center leading-5 gap-8 overflow-hidden ${
-          isBurgerOpen ? "space-y-5 h-full py-10 flex " : "hidden"
+        className={`menu lg:flex p-2 lg:flex-row flex-col items-center leading-5 lg:gap-10 gap-8 h-full ${
+          isBurgerOpen ? "space-y-5 h-full py-10 flex" : "hidden"
         }`}
       >
         <NavItem gotolink="#about">À propos</NavItem>
         <Drop />
-        <NavItem gotolink="#archives">Archives</NavItem>
-        <NavItem gotolink="#faq">FaQ</NavItem>
+        <NavItem gotolink="#archives">Archive</NavItem>
+        <NavItem gotolink="#faq">FAQ</NavItem>
 
         <button
           type="button"
