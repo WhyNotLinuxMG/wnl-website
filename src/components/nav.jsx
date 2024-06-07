@@ -135,7 +135,7 @@ const Nav = () => {
         }`}
       >
         <NavItem gotolink="#about">À propos</NavItem>
-        <Drop />
+        <Drop setIsBurgerOpen={setIsBurgerOpen} />
         <NavItem gotolink="#archives">Archive</NavItem>
         <NavItem gotolink="#faq">FAQ</NavItem>
 
