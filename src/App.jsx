@@ -14,32 +14,37 @@ import GetTicket from './scenes/GetTicket'
 import Photos from './scenes/Photos'
 import Questions from './scenes/Questions'
 import About from './scenes/About'
-
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   const WNL = new Date("June 22, 2024").getTime();
   return (
-    <>
-      <Home />
-      <div className="bg-background">
-        <div className="mx-auto max-w-[1600px]  ">
-        <CountDownDay WNL={WNL} />
-          <OrganizersPartners />
-          <About />
-          <Conferences />
-          <Stande />
-          <Statistiques />
-          <Comptetion />
-          <Photos />
-          <Questions />
-        </div>
-        <GetTicket />
-        <Footer />
+    <Routes>
+      <Route path="/" element={
+        <>
+          <Home />
+          <div className="bg-background">
+            <div className="mx-auto max-w-[1600px]  ">
+              <CountDownDay WNL={WNL} />
+              <OrganizersPartners />
+              <About />
+              <Conferences />
+              <Stande />
+              <Statistiques />
+              <Comptetion />
+              <Photos />
+              <Questions />
+            </div>
+            <GetTicket />
+            <Footer />
 
-      </div>
+          </div>
+        </>
+      } />
+      <Route path="/about" element={<About/>}/>
+    </Routes >
 
-      
-    </>
+
   );
 };
 
