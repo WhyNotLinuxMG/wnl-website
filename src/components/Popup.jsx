@@ -18,7 +18,7 @@ const Popup = () => {
     e.preventDefault();
     const data={mail,ville,attend,name}
     console.log(data)
-    // You can add further logic here, like sending the form data to an API
+
   };
   return  (
     <div className='fixed inset-0 flex items-center justify-center z-50 '>
