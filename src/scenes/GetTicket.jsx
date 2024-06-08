@@ -10,8 +10,8 @@ function GetTicket() {
       <br />incontournable !
       </h2>
       <GetTicketButton/>
-      <div className="pb-5 absolute bottom-[-2rem] ">
-        <img src={Binary} className="h-[100px]" alt="" />
+      <div className="pb-5 absolute bottom-[-3rem] ">
+        <img src={Binary} className="h-[60px]" alt="" />
         
       </div>
     </div>
