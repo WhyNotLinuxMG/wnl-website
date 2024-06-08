@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { motion } from 'framer-motion';
-
+import Error from './Error';
 const Popup = () => {
    const [close, setclose] = useState(false)
    const [isChecked, setIsChecked] = useState(false);
@@ -124,7 +124,7 @@ const Popup = () => {
 
                 <div className='mt-2 grid grid-cols-1 md:grid-cols-3 gap-4'>
 
-                  <div className={`border ${isChecked?"border-yellow":"border-raven"} bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}>
+                  <div className={`border ${isChecked?"border-yellow":"border-raven"} ${error ? "border-red-900" : "border-raven"} bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}>
                     <input onChange={() => setAttente("reseautage")}
                     checked={attend==="reseautage"}
                      type="radio"
