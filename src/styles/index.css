@@ -61,3 +61,7 @@ body {
   background-color: red !important;
 }
 
+
+.popup{
+  background: linear-gradient(#020f13, #686868 188%);
+}
