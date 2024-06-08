@@ -3,6 +3,7 @@ import Logo from "../ressources/logos_linux-tux.svg";
 import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
 import NavItem from "./NavItem";
+import Popup from "./Popup";
 import React, { useState, useEffect } from "react";
 const Nav = () => {
   const [navSize, setnavSize] = useState("10rem");
@@ -12,7 +13,7 @@ const Nav = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const [btnColor, setBtnColor] = useState('bg-[#050708] text-white');
-
+  const [isPop,setIsPop]=useState(false)
   const handleClosingBurger = () => {
     if (window.innerWidth >= 1024) {
       setIsBurgerOpen(false);
@@ -123,11 +124,15 @@ const Nav = () => {
 
         <button
           type="button"
-          className={`${btnColor} font-DMMono hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2`}
+          onClick={()=>setIsPop(!isPop)}
+          className={`${btnColor} font-DMMono hover:bg-[#050708]/90  focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2`}
         >
           Inscription
         </button>
       </div>
+      {isPop && (
+        <Popup/>
+      )}
     </header>
   );
 };

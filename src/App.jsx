@@ -15,6 +15,7 @@ import Photos from './scenes/Photos'
 import Questions from './scenes/Questions'
 import About from './scenes/About'
 import { Route, Routes } from 'react-router-dom'
+
 const App = () => {
   const WNL = new Date("June 22, 2024").getTime();
   return (
