@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { motion } from 'framer-motion';
 
 const Popup = () => {
    const [close, setclose] = useState(false)
@@ -15,6 +16,7 @@ const Popup = () => {
    if(close){
     return null
    }
+   
    const handleSubmit = (e) => {
     e.preventDefault();
     const data={mail,ville,attend,name}
@@ -22,7 +24,7 @@ const Popup = () => {
 
   };
   return  (
-    <div className='fixed inset-0 flex items-center justify-center z-50 '>
+    <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:.5}} className='fixed inset-0 flex items-center justify-center z-50 '>
       <div className='w-full h-full md:w-[836px] '>
         <div className='  bg-ebony border border-raven p-4 rounded-md relative '>
           <div className=''>
@@ -173,7 +175,7 @@ const Popup = () => {
         </div>
       </div>
      
-    </div>
+    </motion.div>
   )
 }
 
