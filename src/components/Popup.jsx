@@ -7,6 +7,7 @@ const Popup = () => {
    const [name,setName]=useState("")
    const [ville,setVille]=useState("")
    const [attend,setAttente]=useState("")
+  //  to show data 
    const [submition,setSubmition]=useState("")
    const handleClose=()=>{
     setclose(true)
