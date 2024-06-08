@@ -10,6 +10,9 @@ const Popup = () => {
    const [attend,setAttente]=useState("")
   //  to show data 
    const [submition,setSubmition]=useState("")
+   const [error,setError]=useState('')
+
+
    const handleClose=()=>{
     setclose(true)
    }
@@ -19,8 +22,13 @@ const Popup = () => {
    
    const handleSubmit = (e) => {
     e.preventDefault();
-    const data={mail,ville,attend,name}
-    console.log(data)
+    if(name && ville && attend && mail){
+      const data={mail,ville,attend,name}
+      console.log(data)
+
+    }else{
+      setError("remplir la formulaire")
+    }
 
   };
   return  (
@@ -48,6 +56,7 @@ const Popup = () => {
             <form onSubmit={handleSubmit}>
 
               <div className='mb-3'>
+                
                 <div className='flex items-center'>
                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.5 5L6.68475 7.93775C8.5965 9.02075 9.4035 9.02075 11.3152 7.93775L16.5 5" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
