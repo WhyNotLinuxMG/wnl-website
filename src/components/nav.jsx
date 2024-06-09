@@ -5,7 +5,8 @@ import Drop from "./Drop";
 import NavItem from "./NavItem";
 import { useState, useEffect } from "react";
 import Popup from "./Popup";
-const Nav = () => {
+
+const Nav = ({ setIsPop, isPop }) => {
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
   const [navPaddingY, setNavPaddingY] = useState("0.75rem");
@@ -13,7 +14,7 @@ const Nav = () => {
 
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [btnColor, setBtnColor] = useState("bg-[#050708] text-white");
-  const [isPop, setIsPop] = useState(false);
+  // const [isPop, setIsPop] = useState(false);
   //close opened burger when screen became large
   const handleClosingBurger = () => {
     if (window.innerWidth >= 1024) {

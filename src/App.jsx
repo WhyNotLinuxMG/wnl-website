@@ -5,6 +5,7 @@ import Stande from "./page/Stande";
 import Statistiques from "./page/Statistiques";
 import Home from "./scenes/Home";
 import "./styles/App.css";
+import { useState } from "react";
 
 import CountDownDay from "./scenes/CountDownDay";
 import OrganizersPartners from "./scenes/OrganizersPartners";
@@ -17,9 +18,11 @@ import About from "./scenes/About";
 
 const App = () => {
   const WNL = new Date("June 22, 2024").getTime();
+  const [isPop, setIsPop] = useState(false);
+
   return (
     <>
-      <Home />
+      <Home setIsPop={setIsPop} isPop={isPop} />
       <div className="bg-background">
         <div className="mx-auto max-w-[1600px]  ">
           <CountDownDay WNL={WNL} />
@@ -32,7 +35,7 @@ const App = () => {
           <Photos />
           <Questions />
         </div>
-        <GetTicket />
+        <GetTicket setIsPop={setIsPop} isPop={isPop} />
         <Footer />
       </div>
     </>

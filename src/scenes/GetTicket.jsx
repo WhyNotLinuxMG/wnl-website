@@ -1,7 +1,7 @@
 import Binary from "../assets/images/binary.png";
 import ButtonFill from "../components/ButtonFill";
 import GetTicketButton from "../components/GetTicketButton";
-function GetTicket() {
+function GetTicket({ setIsPop, isPop }) {
   return (
     <div className="flex flex-col justify-center items-center gap-y-5 h-screen text-center px-14 py-0 md:py-20  gradientBg relative">
       <ButtonFill content="22 Juin 2024"></ButtonFill>
@@ -10,10 +10,10 @@ function GetTicket() {
         <br />
         incontournable !
       </h2>
-      <GetTicketButton />
+      <GetTicketButton setIsPop={setIsPop} isPop={isPop} />
       <div className=" absolute left-0 bottom-0">
         <img src={Binary} className="h-[70px]" alt="" />
-        <img src={Binary} className="h-[70px] lg:hidden " alt="" />
+        <img src={Binary} className="h-[70px] md:hidden " alt="" />
       </div>
     </div>
   );
