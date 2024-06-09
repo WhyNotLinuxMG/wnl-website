@@ -1,12 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-function GetTicketButton() {
+import React from "react";
+import { motion } from "framer-motion";
+function GetTicketButton({ setIsPop, isPop }) {
   return (
     <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      className="bg-white font-DMMono rounded-md mb-3 w-full max-w-xs h-14 flex items-center justify-center px-4 py-2 sm:w-auto mr-5"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className="bg-white font-DMMono rounded-md mb-3 w-full max-w-xs h-14 flex items-center justify-center px-4 py-2 sm:w-auto md:mr-5"
       aria-label="Get a ticket"
+      onClick={() => setIsPop(!isPop)}
     >
       <span className="text-sm md:text-xl mb-0">Obtenir un billet</span>
       <svg

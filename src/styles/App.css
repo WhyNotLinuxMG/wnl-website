@@ -3,30 +3,27 @@
   background: linear-gradient(207deg, #04315c 0%, rgb(1, 15, 22) 100%);
 }
 
-
-.Kontes-Compressed{
-    font-family: "Kontes-Compressed", sans-serif;
+.Kontes-Compressed {
+  font-family: "Kontes-Compressed", sans-serif;
 }
 
-
-.Kontes-Compressed-Bold{
-    font-family: "Kontes-CompressedBold", sans-serif;
+.Kontes-Compressed-Bold {
+  font-family: "Kontes-CompressedBold", sans-serif;
 }
-
 
 .color-yellow-sea {
   color: #eea736;
 }
-.color-raven { 
+.color-raven {
   color: #6c757d;
 }
 
 .nav-list {
-    color: #fff;
-    font-weight: 400;
-    font-family: "DMMono-Light", sans-serif;
-    font-size: 20px;
-    text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-family: "DMMono-Light", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /* .backtitle{
@@ -38,52 +35,57 @@ text-align: left;
 } */
 
 .gradientBg {
-    background: rgb(2, 15, 19);
-    background: linear-gradient(61deg, rgba(2, 15, 19, 1) 0%, rgba(17, 86, 166, 1) 100%);
-  
+  background: rgb(2, 15, 19);
+  background: linear-gradient(
+    61deg,
+    rgba(2, 15, 19, 1) 0%,
+    rgba(17, 86, 166, 1) 100%
+  );
 }
 
 .contrib-container {
-    filter: url('#flt_tag');
-    width: 282px;
-    height: 424px;
-    overflow: hidden;
-
-
+  filter: url("#flt_tag");
+  width: 282px;
+  height: 424px;
+  overflow: hidden;
 }
 
-.contrib-container>img {
-    margin: 0 auto;
-    clip-path: polygon(0% 0%, 70% 0%, 100% 20%, 100% 100%, 0% 100%);
-
+.contrib-container > img {
+  margin: 0 auto;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 20%, 100% 100%, 0% 100%);
 }
 
 .flt_svg {
-    visibility: hidden;
-    position: absolute;
-    width: 0px;
-    height: 0px;
-
+  visibility: hidden;
+  position: absolute;
+  width: 0px;
+  height: 0px;
 }
 
 @keyframes rotateImage {
-    0% {
-      transform: rotate(0deg);
-    }
-    25% {
-      transform: rotate(-15deg);
-    }
-    50% {
-      transform: rotate(15deg);
-    }
-    75% {
-      transform: rotate(-15deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .image-rotate {
-    animation: rotateImage 2s ease-in-out;
+  25% {
+    transform: rotate(-15deg);
   }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.image-rotate {
+  animation: rotateImage 2s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  header .menu {
+    overflow: hidden;
+  }
+}

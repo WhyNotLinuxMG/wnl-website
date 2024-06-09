@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { photo } from '../utils';
+import { photo } from "../utils";
 import { useState } from "react";
 
 const PhotoSlider = () => {
@@ -24,37 +24,37 @@ const PhotoSlider = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
     ],
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
           borderRadius: "10px",
           padding: "10px",
-          marginTop: "12px"
+          marginTop: "12px",
         }}
       >
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: i => (
+    customPaging: (i) => (
       <div
         style={{
           width: "10px",
@@ -63,30 +63,30 @@ const PhotoSlider = () => {
           display: "inline-block",
           margin: "0 5px",
           backgroundColor: "gray",
-          marginBottom: "10px"
+          marginBottom: "10px",
         }}
-        className='custom-dot'
+        className="custom-dot"
       />
-    )
+    ),
   };
 
   return (
-    <div className='mt-5'>
+    <div className="mt-5">
       <div className="slider-container overflow-hidden">
         <Slider {...settings} className="pb-4">
           {photo.map((item) => (
-            <div key={item.id} className='pl-5'>
-              <img 
+            <div key={item.id} className="pl-5">
+              <img
                 className="w-[800px]"
-                src={item.img} 
-                alt={item.description} 
+                src={item.img}
+                alt={item.description}
               />
             </div>
           ))}
         </Slider>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PhotoSlider;
