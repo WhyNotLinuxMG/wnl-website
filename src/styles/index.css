@@ -24,16 +24,19 @@ body {
   font-family: "Kontes-Compressed";
   src: local("Kontes-Compressed"),
     url("../fonts/Kontes/Kontes-Compressed.otf") format("truetype");
+    font-display: swap;
 }
 @font-face {
   font-family: "DMMono";
   src: local("DMMono"),
     url("../fonts/dm-mono-2/DMMono-Regular.tt") format("truetype");
+    font-display: swap;
 }
 @font-face {
   font-family: "DMMono-Light";
   src: local("DMMono-Light"),
     url("../fonts/dm-mono-2/DMMono-Light.ttf") format("truetype");
+    font-display: swap;
 }
 @font-face {
   font-family: "Kontes-CompressedBold";
@@ -61,3 +64,7 @@ body {
   background-color: red !important;
 }
 
+
+.popup{
+  background: linear-gradient(#020f13, #686868 188%);
+}

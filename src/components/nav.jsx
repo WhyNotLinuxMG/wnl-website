@@ -1,8 +1,10 @@
+import { Link } from "react-scroll";
 import Logo from "../ressources/logos_linux-tux.svg";
 import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
 import NavItem from "./NavItem";
 import { useState, useEffect } from "react";
+import Popup from "./Popup";
 const Nav = () => {
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
@@ -10,9 +12,8 @@ const Nav = () => {
   const [borderWidth, setBorderWidth] = useState("0px");
 
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-
   const [btnColor, setBtnColor] = useState("bg-[#050708] text-white");
-
+  const [isPop, setIsPop] = useState(false);
   //close opened burger when screen became large
   const handleClosingBurger = () => {
     if (window.innerWidth >= 1024) {
@@ -94,7 +95,10 @@ const Nav = () => {
     >
       {/* LOGO */}
       <div className="flex lg:w-auto w-full lg:block justify-between items-center px-4 lg:px-0">
-        <a className="flex items-center justify-between " href="#">
+        <a
+          onClick={() => scroll.ScrollToTop()}
+          className="flex items-center justify-between "
+        >
           <div className="mr-3">
             <img src={Logo} className=" w-12 lg:w-16 h-auto" />
           </div>
@@ -134,10 +138,10 @@ const Nav = () => {
           isBurgerOpen ? "space-y-5 h-full py-10 flex" : "hidden"
         }`}
       >
-        <NavItem gotolink="#about">À propos</NavItem>
+        <NavItem gotolink="about">À propos</NavItem>
         <Drop setIsBurgerOpen={setIsBurgerOpen} />
-        <NavItem gotolink="#archives">Archive</NavItem>
-        <NavItem gotolink="#faq">FAQ</NavItem>
+        <NavItem gotolink="archives">Archive</NavItem>
+        <NavItem gotolink="faq">FAQ</NavItem>
 
         <button
           type="button"
@@ -150,6 +154,7 @@ const Nav = () => {
           Inscription
         </button>
       </div>
+      {isPop && <Popup />}
     </header>
   );
 };

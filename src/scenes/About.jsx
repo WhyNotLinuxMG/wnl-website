@@ -1,10 +1,11 @@
 import About1 from "../assets/images/about1.jpeg";
 import About2 from "../assets/images/about2.jpeg";
 import ButtonFill from "../components/ButtonFill";
+import { Element } from "react-scroll";
 
 function About() {
   return (
-    <div className="w-full pt-24" id="about">
+    <Element as="section" className="w-full pt-24" name="about">
       <div className="w-full h-[90vh] relative">
         <img
           src={About1}
@@ -38,7 +39,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 }
 
