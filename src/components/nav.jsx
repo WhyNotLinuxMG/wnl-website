@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import Logo from "../ressources/logos_linux-tux.svg";
 import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
@@ -145,6 +145,7 @@ const Nav = () => {
 
         <button
           type="button"
+          onClick={() => setIsPop(!isPop)}
           className={`${btnColor} font-DMMono bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none
            focus:ring-[#050708]/50 font-medium
            rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50
