@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Logo from "../ressources/logos_linux-tux.svg";
 import { TextOfLogo } from "./Components";
 import Drop from "./Drop";
@@ -96,8 +96,8 @@ const Nav = () => {
       {/* LOGO */}
       <div className="flex lg:w-auto w-full lg:block justify-between items-center px-4 lg:px-0">
         <a
-          onClick={() => scroll.ScrollToTop()}
-          className="flex items-center justify-between "
+          onClick={() => scroll.scrollToTop({ duration: 500 })}
+          className="flex items-center justify-between cursor-pointer"
         >
           <div className="mr-3">
             <img src={Logo} className=" w-12 lg:w-16 h-auto" />

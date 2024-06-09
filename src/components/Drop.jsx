@@ -29,7 +29,7 @@ export default function Drop({ setIsBurgerOpen }) {
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <MenuButton className="inline-flex w-full justify-center gap-x-1.5  font-DMMono text-white  sm:flex">
-          Activités
+          <span className="hover:text-yellow">Activités</span>
           <ChevronDownIcon
             className="-mr-1 h-5 w-5 text-gray-400"
             aria-hidden="true"
@@ -76,6 +76,7 @@ function DropLink({ to, children }) {
       to={to}
       smooth={true}
       duration={500}
+      offset={-50}
       className={
         "block px-4 py-2 text-sm font-DMMono cursor-pointer hover:bg-yellow"
       }
