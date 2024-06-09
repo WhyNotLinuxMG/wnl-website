@@ -8,6 +8,7 @@ import Rivo from "../assets/images/contributeurs/rivo.jpeg";
 import Damia from "../assets/images/contributeurs/damia.jpg";
 import Aina from "../assets/images/contributeurs/ainaMc.jpg";
 import Arleme from "../assets/images/contributeurs/arleme.jpeg";
+import NyFanasina from "../assets/images/contributeurs/nyfanasina.jpeg";
 
 export const contributors = [
   {
@@ -36,7 +37,7 @@ export const contributors = [
     image: NirinaDoris,
   },
   {
-    nom: "Njakarimanana Nerson",
+    nom: "Mampionona Nj. Nerson",
     fonction: "Développeur",
     image: Nerson,
   },
@@ -59,5 +60,10 @@ export const contributors = [
     nom: "Arlème Johnson",
     fonction: "Développeur",
     image: Arleme,
+  },
+  {
+    nom: "Ny Fanasina",
+    fonction: "Développeur",
+    image: NyFanasina,
   },
 ];
