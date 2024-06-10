@@ -37,7 +37,7 @@ const Hero = ({ setIsPop, isPop }) => {
             <p className="max-w-2xl mb-6 text-white lg:mb-8 md:text-lg lg:text-xl font-DMMono ">
               Explorez le pouvoir transformateur de Linux. Rejoignez-nous pour
               découvrir son potentiel illimité lors de cet évènement
-              incontournable..
+              incontournable.
             </p>
             <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
               <GetTicketButton setIsPop={setIsPop} isPop={isPop} />

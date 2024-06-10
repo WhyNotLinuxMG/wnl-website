@@ -15,7 +15,6 @@ import GetTicket from "./scenes/GetTicket";
 import Photos from "./scenes/Photos";
 import Questions from "./scenes/Questions";
 import About from "./scenes/About";
-import Popup from "./components/Popup";
 
 const App = () => {
   const WNL = new Date("June 22, 2024").getTime();
@@ -23,7 +22,6 @@ const App = () => {
 
   return (
     <>
-      {isPop && <Popup />}
       <Home setIsPop={setIsPop} isPop={isPop} />
       <div className="bg-background">
         <div className="mx-auto max-w-[1600px]">

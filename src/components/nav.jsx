@@ -162,7 +162,7 @@ const Nav = ({ setIsPop, isPop }) => {
           Inscription
         </button>
       </div>
-      {/* {isPop && <Popup />} */}
+      {isPop && <Popup />}
     </header>
   );
 };
