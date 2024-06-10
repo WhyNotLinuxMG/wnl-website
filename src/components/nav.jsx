@@ -77,7 +77,10 @@ const Nav = ({ setIsPop, isPop }) => {
 
   return (
     <header
-      className={`flex font-DMMono capitalize lg:flex-row lg:items-center transition-[height_2s_ease-in-out] duration-700 lg:justify-between flex-col fixed w-full top-0 left-0 z-50 lg:px-5 px-0 lg:py-5 border-raven
+      className={`flex font-DMMono capitalize lg:flex-row lg:items-center 
+      transition-[height_2s_ease-in-out] duration-700 lg:justify-between 
+      flex-col fixed w-screen top-0 left-0 z-50 lg:px-5 px-0 lg:py-5
+       border-raven
        ${
          isBurgerOpen ? "top-section justify-start h-[65vh] py-3 gap-y-9" : ""
        }`}
@@ -95,7 +98,10 @@ const Nav = ({ setIsPop, isPop }) => {
       }
     >
       {/* LOGO */}
-      <div className="flex lg:w-auto w-full lg:block justify-between items-center px-4 lg:px-0">
+      <div
+        className="flex lg:w-auto w-full lg:block justify-between items-center
+       px-4 lg:px-0"
+      >
         <a
           onClick={() => scroll.scrollToTop({ duration: 500 })}
           className="flex items-center justify-between cursor-pointer"
@@ -156,7 +162,7 @@ const Nav = ({ setIsPop, isPop }) => {
           Inscription
         </button>
       </div>
-      {isPop && <Popup />}
+      {/* {isPop && <Popup />} */}
     </header>
   );
 };

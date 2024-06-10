@@ -20,7 +20,7 @@ const Hero = ({ setIsPop, isPop }) => {
   return (
     <>
       <div
-        className="grid mt-4 max-w-[1600px] mx-auto px-4 py-8 items-center lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full hidden md:grid"
+        className="mt-4 max-w-[1600px] mx-auto px-4 py-8 items-center lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full hidden md:grid"
         id="hero"
       >
         <div className="contents">

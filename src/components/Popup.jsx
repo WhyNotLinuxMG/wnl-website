@@ -33,7 +33,7 @@ const Popup = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 flex items-center justify-center z-50 "
+      className="fixed inset-0 flex items-center justify-center z-[100] "
     >
       <div className="w-full h-full md:w-[836px] ">
         <div className="  bg-ebony border border-raven p-4 rounded-md relative ">
