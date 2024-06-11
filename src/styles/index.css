@@ -29,7 +29,7 @@ body {
 @font-face {
   font-family: "DMMono";
   src: local("DMMono"),
-    url("../fonts/dm-mono-2/DMMono-Regular.tt") format("truetype");
+    url("../fonts/dm-mono-2/DMMono-Regular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
