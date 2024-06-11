@@ -33,7 +33,7 @@ const Popup = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 flex items-center justify-center z-[100] "
+      className="absolute inset-0 flex items-center justify-center z-50 "
     >
       <div className="w-full h-full md:w-[836px] ">
         <div className="  bg-ebony border border-raven p-4 rounded-md relative ">
@@ -73,7 +73,7 @@ const Popup = () => {
             <h4 className="font-DMMono text-white text-[16px] md:text-[20px] text-center ">
               WNL 2.0 S'inscrire
             </h4>
-            <h2 className="text-white font-kontes text-center mt-5 mb-5 md:mt-3 text-[32px] md:text-[58px]">
+            <h2 className="text-white font-kontes text-center mt-3 mb-2 md:mt-3 text-[32px] md:text-[58px]">
               Inscrivez- <span className="text-yellow">vous</span>
             </h2>
           </div>

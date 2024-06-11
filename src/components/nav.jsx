@@ -82,7 +82,7 @@ const Nav = ({ setIsPop, isPop }) => {
       flex-col fixed w-screen top-0 left-0 z-50 lg:px-5 px-0 lg:py-5
        border-raven
        ${
-         isBurgerOpen ? "top-section justify-start h-[65vh] py-3 gap-y-9" : ""
+         isBurgerOpen ? "top-section justify-start h-[75vh] py-3 gap-y-9" : ""
        }`}
       style={
         !isBurgerOpen
@@ -147,13 +147,17 @@ const Nav = ({ setIsPop, isPop }) => {
       >
         <NavItem gotolink="about">À propos</NavItem>
         <Drop setIsBurgerOpen={setIsBurgerOpen} />
-        <NavItem gotolink="archives">Archive</NavItem>
-        <NavItem gotolink="faq">FAQ</NavItem>
+        <NavItem gotolink="archives" offset={-80}>
+          Archive
+        </NavItem>
+        <NavItem gotolink="faq" offset={-120}>
+          FAQ
+        </NavItem>
 
         <button
           type="button"
           onClick={() => setIsPop(!isPop)}
-          className={`${btnColor} font-DMMono bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none
+          className={`hover:bg-[#050708]/90 ${btnColor} hover:opacity-90 font-DMMono bg-[#050708]  focus:ring-4 focus:outline-none
            focus:ring-[#050708]/50 font-medium
            rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50
             dark:hover:bg-[#050708]/30 me-2 mb-2

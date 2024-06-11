@@ -24,19 +24,19 @@ body {
   font-family: "Kontes-Compressed";
   src: local("Kontes-Compressed"),
     url("../fonts/Kontes/Kontes-Compressed.otf") format("truetype");
-    font-display: swap;
+  font-display: swap;
 }
 @font-face {
   font-family: "DMMono";
   src: local("DMMono"),
     url("../fonts/dm-mono-2/DMMono-Regular.tt") format("truetype");
-    font-display: swap;
+  font-display: swap;
 }
 @font-face {
   font-family: "DMMono-Light";
   src: local("DMMono-Light"),
     url("../fonts/dm-mono-2/DMMono-Light.ttf") format("truetype");
-    font-display: swap;
+  font-display: swap;
 }
 @font-face {
   font-family: "Kontes-CompressedBold";
@@ -60,11 +60,27 @@ body {
   background-color: rgba(46, 50, 59, 1) !important;
 }
 /* Add this CSS to your stylesheet */
-.custom-dot.slick-active {
+/* .custom-dot.slick-active {
   background-color: red !important;
+} */
+
+.popup {
+  background: linear-gradient(#020f13, #686868 188%);
 }
 
+.slick-slide {
+  transition: all 0.4s ease-in-out;
+  @apply scale-[.8];
+}
+.slick-slide img {
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
 
-.popup{
-  background: linear-gradient(#020f13, #686868 188%);
+.slick-center img {
+  @apply scale-125;
+}
+
+.custom-dot .slick-active li {
+  @apply bg-yellow;
 }

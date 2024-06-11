@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 
-function NavItem({ className = "link", children, gotolink = "#" }) {
+function NavItem({ className = "link", children, gotolink = "#", offset = 0 }) {
   // return (
   //   <a href="#" className="hidden font-DMMono text-white sm:block">
   //     {props.children}
@@ -10,6 +10,7 @@ function NavItem({ className = "link", children, gotolink = "#" }) {
   return (
     <Link
       to={gotolink}
+      offset={offset}
       className={`font-DMMono text-white cursor-pointer relative ${className}`}
     >
       <span className=" hover:text-yellow ">{children}</span>
