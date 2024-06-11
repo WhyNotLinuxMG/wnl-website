@@ -8,6 +8,7 @@ function Contributor() {
     dots: false,
     infinite: true,
     slidesToScroll: 1,
+    swipeToSlide: true,
     autoplay: true,
     variableWidth: true,
     speed: 3000,

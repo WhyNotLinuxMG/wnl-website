@@ -10,41 +10,24 @@ const PhotoSlider = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    variableWith: true,
+    slidesToShow: 3,
+    swipeToSlide: true,
     dots: true,
-    // speed: 500,
     autoplaySpeed: 2000,
     pauseOnHover: false,
     autoplay: true,
+    initialSlide: 0,
     // afterChange: (current, next) => {
     //   setIsCenter(next === 1);
     // },
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
-    //       initialSlide: 2,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
     appendDots: (dots) => (
       <div
         style={{
@@ -58,19 +41,19 @@ const PhotoSlider = () => {
       </div>
     ),
     customPaging: (i) => (
-      <li
+      <div
         style={{
           width: "10px",
           height: "10px",
         }}
         className="rounded-full bg-gray-400 inline-block hover:bg-yellow"
-      ></li>
+      ></div>
     ),
   };
 
   return (
     <div className="mt-2">
-      <div className="slider-container overflow-hidden py-5">
+      <div className="slider-container overflow-hidden w-full py-5">
         <Slider {...settings} dotsClass="custom-dot">
           {photo.map((item) => (
             <div key={item.id} className="pl-5">

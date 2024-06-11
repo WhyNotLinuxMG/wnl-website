@@ -81,6 +81,6 @@ body {
   @apply scale-125;
 }
 
-.custom-dot .slick-active li {
+.custom-dot .slick-active div {
   @apply bg-yellow;
 }
