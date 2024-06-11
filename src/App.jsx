@@ -24,7 +24,7 @@ const App = () => {
     <>
       <Home setIsPop={setIsPop} isPop={isPop} />
       <div className="bg-background">
-        <div className="mx-auto max-w-[1600px]  ">
+        <div className="mx-auto max-w-[1600px]">
           <CountDownDay WNL={WNL} />
           <OrganizersPartners />
           <About />

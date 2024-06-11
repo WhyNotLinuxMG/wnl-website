@@ -11,11 +11,11 @@ const Comptetion = () => {
       className="bg-background p-3 md:p-0 "
     >
       <div className="max-w-[1700px] px-2 md:mx-4 md:px-12">
-        <ButtonFill content="competion" />
+        <ButtonFill content="compétition" />
         <div className="md:flex md:justify-between mb-5  ">
           <h2 className="font-kontes md:w-3/4 text-white text-[28px] md:text-[58px] ">
-            Differents challenges a relever pour{" "}
-            <span className="text-raven">rendre cet evenement fun</span>
+            Différents challenges à relever pour participer{" "}
+            <span className="text-raven">aux compétitions</span>
           </h2>
           <p className="text-white font-DMMono text-[14px] md:text-[20px] md:w-[30%]">
             Les consignes seront publiés sur la page. Suivez-nous régulièrement
