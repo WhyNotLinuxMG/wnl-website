@@ -1,33 +1,46 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import Error from "./Error";
+import { useState } from "react";
+import createAttendee from "../query/attendees";
+
 const Popup = () => {
-  const [close, setclose] = useState(false);
+  const [close, setClose] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [mail, setMail] = useState("");
   const [name, setName] = useState("");
   const [ville, setVille] = useState("");
   const [attend, setAttente] = useState("");
-  //  to show data
   const [submition, setSubmition] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleClose = () => {
-    setclose(true);
+    setClose(true);
   };
+
   if (close) {
     return null;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (name && ville && attend && mail) {
-      const data = { mail, ville, attend, name };
-      console.log(data);
+      const data = { email: mail, city: ville, expectation: attend, name };
+      setIsLoading(true);
+      setError("");
+      setSubmition("");
+      try {
+        await createAttendee(data);
+        setSubmition("Votre inscription est réussie");
+      } catch (error) {
+        setError("Une erreur durant l'inscription, veuillez ressayer ultérieurement");
+      } finally {
+        setIsLoading(false);
+      }
     } else {
-      setError("remplir la formulaire");
+      setError("Merci de bien vouloir remplir le formulaire");
     }
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -36,8 +49,8 @@ const Popup = () => {
       className="absolute inset-0 flex items-center justify-center z-50 "
     >
       <div className="w-full h-full md:w-[836px] ">
-        <div className="  bg-ebony border border-raven p-4 rounded-md relative ">
-          <div className="">
+        <div className="bg-ebony border border-raven p-4 rounded-md relative">
+          <div>
             <button onClick={handleClose} className="absolute md:hidden">
               <svg
                 width="24"
@@ -71,7 +84,7 @@ const Popup = () => {
               </svg>
             </button>
             <h4 className="font-DMMono text-white text-[16px] md:text-[20px] text-center ">
-              WNL 2.0 S'inscrire
+              WNL 20 S'inscrire
             </h4>
             <h2 className="text-white font-kontes text-center mt-3 mb-2 md:mt-3 text-[32px] md:text-[58px]">
               Inscrivez- <span className="text-yellow">vous</span>
@@ -96,16 +109,16 @@ const Popup = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                    <path
-                      d="M1.51201 10.6072C1.56076 12.9059 1.58551 14.0557 2.43376 14.9069C3.28201 15.7589 4.46251 15.7882 6.82426 15.8474C8.27926 15.8849 9.72076 15.8849 11.1758 15.8474C13.5375 15.7882 14.718 15.7589 15.5663 14.9069C16.4145 14.0557 16.4393 12.9059 16.4888 10.6072C16.5038 9.86769 16.5038 9.13269 16.4888 8.39319C16.4393 6.09444 16.4145 4.94469 15.5663 4.09344C14.718 3.24144 13.5375 3.21219 11.1758 3.15294C9.72549 3.11634 8.27453 3.11634 6.82426 3.15294C4.46251 3.21219 3.28201 3.24144 2.43376 4.09344C1.58551 4.94469 1.56076 6.09444 1.51126 8.39319C1.49547 9.1311 1.49622 9.86927 1.51201 10.6072Z"
-                      stroke="white"
-                      strokeWidth="1.125"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
+                      <path
+                        d="M1.51201 10.6072C1.56076 12.9059 1.58551 14.0557 2.43376 14.9069C3.28201 15.7589 4.46251 15.7882 6.82426 15.8474C8.27926 15.8849 9.72076 15.8849 11.1758 15.8474C13.5375 15.7882 14.718 15.7589 15.5663 14.9069C16.4145 14.0557 16.4393 12.9059 16.4888 10.6072C16.5038 9.86769 16.5038 9.13269 16.4888 8.39319C16.4393 6.09444 16.4145 4.94469 15.5663 4.09344C14.718 3.24144 13.5375 3.21219 11.1758 3.15294C9.72549 3.11634 8.27453 3.11634 6.82426 3.15294C4.46251 3.21219 3.28201 3.24144 2.43376 4.09344C1.58551 4.94469 1.56076 6.09444 1.51126 8.39319C1.49547 9.1311 1.49622 9.86927 1.51201 10.6072Z"
+                        stroke="white"
+                        strokeWidth="1.125"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                   </svg>
                   <label
-                    className="text-white capitalize font-DMMono pl-3"
+                    className="text-white  font-DMMono pl-3"
                     htmlFor=""
                   >
                     {" "}
@@ -119,7 +132,7 @@ const Popup = () => {
                   value={mail}
                   className=" border border-raven bg-ebony w-full h-[50px] mt-2 rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white "
                   placeholder="Votre email "
-                  type="text"
+                  type="email"
                 />
               </div>
 
@@ -139,7 +152,7 @@ const Popup = () => {
                   </svg>
 
                   <label
-                    className="text-white capitalize font-DMMono pl-3"
+                    className="text-white  font-DMMono pl-3"
                     htmlFor=""
                   >
                     {" "}
@@ -173,7 +186,7 @@ const Popup = () => {
                     />
                   </svg>
                   <label
-                    className="text-white capitalize font-DMMono pl-3"
+                    className="text-white  font-DMMono pl-3"
                     htmlFor=""
                   >
                     {" "}
@@ -194,8 +207,8 @@ const Popup = () => {
                       id="ville1"
                       className="pr-2"
                     />
-                    <label className="text-white ml-2 capitalize" htmlFor="">
-                      antananarivo
+                    <label className="text-white ml-2" htmlFor="">
+                      Antananarivo
                     </label>
                   </div>
                   <div className="flex items-center border border-raven bg-ebony w-1/2 h-[50px] mt-2 rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white">
@@ -207,8 +220,8 @@ const Popup = () => {
                       id="ville1"
                       className="pr-2"
                     />
-                    <label className="text-white ml-2 capitalize" htmlFor="">
-                      fianarantsoa
+                    <label className="text-white ml-2" htmlFor="">
+                      Fianarantsoa
                     </label>
                   </div>
                 </div>
@@ -224,23 +237,23 @@ const Popup = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12.75 2V3.5M9 2V3.5M5.25 2V3.5M6 11.75H9M6 8H12M2.625 12.5V7.25C2.625 5.129 2.625 4.06775 3.28425 3.40925C3.94275 2.75 5.004 2.75 7.125 2.75H10.875C12.996 2.75 14.0573 2.75 14.7158 3.40925C15.375 4.06775 15.375 5.129 15.375 7.25V9.5C15.375 13.0355 15.375 14.8032 14.2762 15.9012C13.179 17 11.4113 17 7.875 17H7.125C5.004 17 3.94275 17 3.28425 16.3408C2.625 15.6823 2.625 14.621 2.625 12.5Z"
-                      stroke="white"
-                      strokeWidth="1.125"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                    d="M12.75 2V3.5M9 2V3.5M5.25 2V3.5M6 11.75H9M6 8H12M2.625 12.5V7.25C2.625 5.129 2.625 4.06775 3.28425 3.40925C3.94275 2.75 5.004 2.75 7.125 2.75H10.875C12.996 2.75 14.0573 2.75 14.7158 3.40925C15.375 4.06775 15.375 5.129 15.375 7.25V9.5C15.375 13.0355 15.375 14.8032 14.2762 15.9012C13.179 17 11.4113 17 7.875 17H7.125C5.004 17 3.94275 17 3.28425 16.3408C2.625 15.6823 2.625 14.621 2.625 12.5Z"
+                    stroke="white"
+                    strokeWidth="1.125"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     />
                     <path
-                      d="M15.375 11.375C15.375 11.6212 15.3265 11.865 15.2323 12.0925C15.138 12.32 14.9999 12.5267 14.8258 12.7008C14.6517 12.8749 14.445 13.013 14.2175 13.1073C13.99 13.2015 13.7462 13.25 13.5 13.25C13.125 13.25 12.684 13.1847 12.3203 13.2822C12.1613 13.3248 12.0163 13.4085 11.8999 13.5249C11.7835 13.6413 11.6998 13.7863 11.6573 13.9453C11.5598 14.309 11.625 14.7507 11.625 15.125C11.625 15.6223 11.4275 16.0992 11.0758 16.4508C10.7242 16.8025 10.2473 17 9.75 17"
-                      stroke="white"
-                      strokeWidth="1.125"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                    d="M15.375 11.375C15.375 11.6212 15.3265 11.865 15.2323 12.0925C15.138 12.32 14.9999 12.5267 14.8258 12.7008C14.6517 12.8749 14.445 13.013 14.2175 13.1073C13.99 13.2015 13.7462 13.25 13.5 13.25C13.125 13.25 12.684 13.1847 12.3203 13.2822C12.1613 13.3248 12.0163 13.4085 11.8999 13.5249C11.7835 13.6413 11.6998 13.7863 11.6573 13.9453C11.5598 14.309 11.625 14.7507 11.625 15.125C11.625 15.6223 11.4275 16.0992 11.0758 16.4508C10.7242 16.8025 10.2473 17 9.75 17"
+                    stroke="white"
+                    strokeWidth="1.125"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     />
                   </svg>
 
                   <label
-                    className="text-white capitalize font-DMMono pl-3"
+                    className="text-white  font-DMMono pl-3"
                     htmlFor=""
                   >
                     {" "}
@@ -257,8 +270,8 @@ const Popup = () => {
                     } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                   >
                     <input
-                      onChange={() => setAttente("reseautage")}
-                      checked={attend === "reseautage"}
+                      onChange={() => setAttente("réseautage")}
+                      checked={attend === "réseautage"}
                       type="radio"
                       name="reseautage"
                       id="reseautage"
@@ -266,8 +279,8 @@ const Popup = () => {
                         isChecked ? "border-yellow" : "border-raven"
                       } mr-2`}
                     />
-                    <label className="text-white capitalize" htmlFor="option1">
-                      Le reseautage
+                    <label className="text-white " htmlFor="option1">
+                      Le réseautage
                     </label>
                   </div>
 
@@ -277,14 +290,14 @@ const Popup = () => {
                     } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                   >
                     <input
-                      onChange={() => setAttente("confrence")}
-                      checked={attend === "confrence"}
+                      onChange={() => setAttente("conférence")}
+                      checked={attend === "conférence"}
                       type="radio"
-                      name="confrence"
-                      id="confrence"
+                      name="conference"
+                      id="conference"
                       className={`${isChecked} ? 'border-yellow' : 'border-raven' mr-2`}
                     />
-                    <label className="text-white capitalize" htmlFor="option2">
+                    <label className="text-white " htmlFor="option2">
                       Les conférence
                     </label>
                   </div>
@@ -295,8 +308,8 @@ const Popup = () => {
                     } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                   >
                     <input
-                      onChange={() => setAttente("competition")}
-                      checked={attend === "competition"}
+                      onChange={() => setAttente("compétition")}
+                      checked={attend === "compétition"}
                       type="radio"
                       name="competition"
                       id="competition"
@@ -304,7 +317,7 @@ const Popup = () => {
                         isChecked ? "border-yellow" : "border-raven"
                       } mr-2`}
                     />
-                    <label className="text-white capitalize" htmlFor="option3">
+                    <label className="text-white " htmlFor="option3">
                       La compétition
                     </label>
                   </div>
@@ -324,7 +337,7 @@ const Popup = () => {
                         isChecked ? "border-yellow" : "border-raven"
                       } mr-2`}
                     />
-                    <label className="text-white capitalize" htmlFor="option4">
+                    <label className="text-white " htmlFor="option4">
                       Autre
                     </label>
                   </div>
@@ -336,9 +349,12 @@ const Popup = () => {
                   type="submit"
                   className="font-DMMono bg-white focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2"
                 >
-                  Inscription
+                  {isLoading ? "Inscription..." : "Inscription"}
                 </button>
               </div>
+
+              {submition && <div className="text-green-500 mt-2 text-center">{submition}</div>}
+              {error && <div className="text-red-500 mt-2 text-center">{error}</div>}
             </form>
           </div>
         </div>
