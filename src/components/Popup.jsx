@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { QRCode } from "react-qrcode-logo";
+import QRCodeComponent from "./qrcode";
+import { useRef } from "react";
 import Error from "./Error";
 const Popup = () => {
   const [close, setclose] = useState(false);
@@ -9,25 +12,41 @@ const Popup = () => {
   const [ville, setVille] = useState("");
   const [attend, setAttente] = useState("");
   //  to show data
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [submition, setSubmition] = useState("");
   const [error, setError] = useState("");
+  const [showQRCode, setShowQRCode] = useState(false);
+  const qrRef = useRef();
 
   const handleClose = () => {
     setclose(true);
   };
-  if (close) {
-    return null;
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && ville && attend && mail) {
       const data = { mail, ville, attend, name };
       console.log(data);
+      setFormSubmitted(true);
+      setShowQRCode(true);
     } else {
       setError("remplir la formulaire");
     }
   };
+
+  const handleDownload = () => {
+    const canvas = qrRef.current.querySelector('canvas');
+    if (canvas) {
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/png');
+      link.download = 'qrcode.png'; 
+      link.click();
+    }
+  };
+
+  if (close) {
+    return null;
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -70,15 +89,32 @@ const Popup = () => {
                 />
               </svg>
             </button>
+
+          </div>
+          {formSubmitted ? (
+            <div className="flex flex-col items-center mt-4">
+            <h2 className="text-white font-kontes text-center mt-3 mb-2 md:mt-3 text-[32px] md:text-[58px]">
+            Télécharger votre <span className="text-yellow">QR Code</span>
+            </h2>
+              <div ref={qrRef}>
+                <QRCodeComponent value="id" />
+              </div>
+              <button
+                onClick={handleDownload}
+                className="bg-yellow text-black text-lg px-24 py-2 mt-4 rounded-md"
+              >
+                Télécharger
+              </button>
+          </div>
+          ) : ( 
+          
+          <div>
             <h4 className="font-DMMono text-white text-[16px] md:text-[20px] text-center ">
               WNL 2.0 S'inscrire
             </h4>
             <h2 className="text-white font-kontes text-center mt-3 mb-2 md:mt-3 text-[32px] md:text-[58px]">
               Inscrivez- <span className="text-yellow">vous</span>
             </h2>
-          </div>
-
-          <div>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <div className="flex items-center">
@@ -340,7 +376,8 @@ const Popup = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </div> 
+          )}
         </div>
       </div>
     </motion.div>
