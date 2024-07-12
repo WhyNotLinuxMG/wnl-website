@@ -17,14 +17,14 @@ import Questions from "./scenes/Questions";
 import About from "./scenes/About";
 
 const App = () => {
-  const WNL = new Date("June 22, 2024").getTime();
+  const WNL = new Date("July 20,2024").getTime();
   const [isPop, setIsPop] = useState(false);
 
   return (
     <>
       <Home setIsPop={setIsPop} isPop={isPop} />
       <div className="bg-background">
-        <div className="mx-auto max-w-[1600px]">
+        <div className="mx-auto max-w-[1601px]">
           <CountDownDay WNL={WNL} />
           <OrganizersPartners />
           <About />
