@@ -4,7 +4,7 @@ import GetTicketButton from "../components/GetTicketButton";
 function GetTicket({ setIsPop, isPop }) {
   return (
     <div className="flex flex-col justify-center items-center gap-y-5 h-screen text-center px-14 py-0 md:py-20  gradientBg relative">
-      <ButtonFill content="22 Juin 2024"></ButtonFill>
+      <ButtonFill content="20 Juillet 2024"></ButtonFill>
       <h2 className="text-[38px] sm:text-[56px] md:text-[98px] text-white font-kontes">
         Ne ratez pas cet <span className="text-raven">évènement</span>
         <br />

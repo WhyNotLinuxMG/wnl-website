@@ -49,7 +49,7 @@ const CountDownDay = ({ WNL }) => {
           />
         </div>
         <h2 className="text-[90px] md:text-[218px] font-kontes text-ebony pt-[3rem] text-nowrap">
-          22 juin 2024
+          20 Juillet 2024
         </h2>
       </div>
     </div>

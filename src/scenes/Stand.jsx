@@ -9,8 +9,7 @@ function Stand() {
       <div className="max-w-[1700px] mx-auto pt-5" id="stand">
         <ButtonFill content="Stand" />
         <h2 className="font-kontes  text-white  text-[34px] md:text-[48px] pt-5 pb-5  pl-2">
-          Démarquez-vous avec un <span className="text-yellow">stand</span> a
-          votre image.
+          Un coup d'oeil à nous  <span className="text-yellow">sponsors</span> 
         </h2>
 
         <div className="pt-9 ml-4 grid md:grid-cols-3  grid-cols-2">

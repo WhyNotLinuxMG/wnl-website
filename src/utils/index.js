@@ -7,11 +7,11 @@ import Conf6 from "../assets/images/conf6.png";
 import Conf7 from "../assets/images/conf7.png";
 import Conf8 from "../assets/images/conf8.png";
 
-import Axian from "../assets/images/axian.png";
-import Esti from "../assets/images/esti.png";
-import Etech from "../assets/images/etech.png";
-import Gdsc from "../assets/images/gdsc.png";
-import MadaLinux from "../assets/images/madalinux.png";
+import Exponent from "../assets/images/logoExponent.png";
+import FullDigits from "../assets/images/logoFullDigits.png";
+import ComputeStore from "../assets/images/logoComputeStore.png";
+import YouthComputing from "../assets/images/logoYouthComputing.png";
+import CPay from "../assets/images/logocpay.png";
 import MobLine from "../assets/images/mobileLine.png";
 import Retour1 from "../assets/images/retour-1.png";
 import Retour2 from "../assets/images/retour-2.png";
@@ -114,32 +114,37 @@ export const stand = [
   {
     id: 1,
     number: "01",
-    image: Esti,
+    name: "Exponent",
+    about: '"On est une agence digitale innovante créée en décembre 2022 , avec comme slogan : Facteur de votre succès ."',
+    image: Exponent,
   },
   {
     id: 2,
     number: "02",
-    image: Etech,
+    name: "FullDigits",
+    about: "FullDigits apporte son expertise aux startups, aux pure players et à l’ensemble des professionnels du digital. ",
+    image: FullDigits,
   },
   {
     id: 3,
     number: "03",
-    image: Axian,
+    name: "Computer Store",
+    about: "Entreprise spécialisée dans la vente d'ordinateurs et de matériels informatiques basé à Fianarantsoa.",
+    image: ComputeStore,
   },
   {
     id: 4,
     number: "04",
-    image: MadaLinux,
+    name: "Youth Computing",
+    about: "De nos jours, beaucoup de gens ont besoin d’un ordinateur, et de nombreuses tâches nécessitent de l’informatique. Surtout les jeunes, dans leur étude, l'équipe Youth_Computing est là pour vous, pour la communauté, pour la nation.",
+    image: YouthComputing,
   },
   {
     id: 5,
     number: "05",
-    image: Esti,
-  },
-  {
-    id: 6,
-    number: "06",
-    image: Gdsc,
+    name: "C-Pay",
+    about: "C-Pay For Madagascar est une entreprise spécialisée dals les paiements en ligne.",
+    image: CPay,
   },
 ];
 
@@ -196,22 +201,10 @@ export const PlaceButton = [
 export const GameStand = [
   {
     id: 1,
-    game: "question pour un champion",
+    game: "Exponent.CH",
     about:
       "Un jeu interactif basé sur Linux, offrant une expérience éducative et divertissante.",
-  },
-  {
-    id: 2,
-    game: "Défi de Shell Scripting",
-    about:
-      "Une compétition pour les codeurs visant à résoudre des défis complexes.",
-  },
-  {
-    id: 3,
-    game: "Desktop Challenge",
-    about:
-      "Un défi pour personnaliser et optimiser l’environnement desktop, mettant en valeur la créativité et l’expertise technique.",
-  },
+  }
 ];
 export const photo = [
   { id: 1, img: Retour1 },
@@ -224,7 +217,7 @@ export const AccordionContent = [
   {
     id: 1,
     title: "Quand-est-ce que l'évènement aura lieu ?",
-    description: "L'évènement aura lieu le 22 juin 2024.",
+    description: "L'évènement aura lieu le 20 juillet 2024.",
   },
   {
     id: 2,

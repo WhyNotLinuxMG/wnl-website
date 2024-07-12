@@ -25,7 +25,7 @@ const Hero = ({ setIsPop, isPop }) => {
       >
         <div className="contents">
           <div className="mr-auto place-self-center lg:col-span-7 ">
-            <ButtonFill content="22 Juin 2024" />
+            <ButtonFill content="20 Juillet 2024" />
             <div className="backtitle">
               <h1 className="Kontes-Compressed-Bold text-[38px] md:text-[78px] text-white pl-3 md:pl-0">
                 Empowering Communities
@@ -61,7 +61,7 @@ const Hero = ({ setIsPop, isPop }) => {
           {/* for mobile device  */}
           <div className="w-full md:w-1/2 md:hidden">
             <div className="text-center md:text-left flex items-center justify-center flex-col md">
-              <ButtonFill content="22 juin 2024" />
+              <ButtonFill content="2à Juillet 2024" />
               <h2 className="font-kontes text-white text-[42px] md:text-[90px]">
                 Empowering <br className="md:hidden" /> Communities Through{" "}
                 <br /> <span className="text-raven">Open Source.</span>

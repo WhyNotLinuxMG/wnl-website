@@ -12,6 +12,11 @@ import NyFanasina from "../assets/images/contributeurs/nyfanasina.jpeg";
 
 export const contributors = [
   {
+    nom: "Arlème Johnson",
+    fonction: "Développeur",
+    image: Arleme,
+  },
+  {
     nom: "Manambintsoa MIHAINGOHERILANTO",
     fonction: "Lead Développeur",
     image: Ntsoa,
@@ -22,18 +27,19 @@ export const contributors = [
     image: Kezia,
   },
   {
+    nom: "Aina Finaritra",
+    fonction: "Front-end Développeur",
+    image: Ainafinaritra,
+  },
+
+  {
     nom: "Gaetan Jonathan BAKARY",
     fonction: "Développeur",
     image: Gaetan,
   },
   {
-    nom: "Aina Finaritra",
-    fonction: "Front-end Développeur",
-    image: Ainafinaritra,
-  },
-  {
     nom: "Nirina Doris Sylvie",
-    fonction: "Développeur",
+    fonction: "Front-end Développeur",
     image: NirinaDoris,
   },
   {
@@ -43,23 +49,18 @@ export const contributors = [
   },
   {
     nom: "Rivo Lalaina",
-    fonction: "Développeur",
+    fonction: "Backend Développeur",
     image: Rivo,
   },
   {
     nom: "Damia Tsiafaratiana",
-    fonction: "Développeur",
+    fonction: "Content Manager",
     image: Damia,
   },
   {
     nom: "Razafindratsiza Tsantan'ny Aina",
     fonction: "Développeur",
     image: Aina,
-  },
-  {
-    nom: "Arlème Johnson",
-    fonction: "Développeur",
-    image: Arleme,
   },
   {
     nom: "Ny Fanasina",
