@@ -26,7 +26,7 @@ const Conferences = () => {
             type <br /> <span className="text-yellow">d’activité</span>
           </h2>
           <div>
-            <ButtonFill content="22 juin 2024" />
+            <ButtonFill content="20 juillet 2024" />
           </div>
         </div>
         <div className="flex items-center md:gap-8 justify-center text-center ">

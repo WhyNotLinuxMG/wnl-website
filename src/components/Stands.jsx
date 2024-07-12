@@ -2,7 +2,7 @@ import React from 'react';
 import { GameStand } from '../utils';
 import GameStands from './GameStands';
 
-const Stands = ({ image, number }) => {
+const Stands = ({ image, number, name, about }) => {
   return (
     <div className='m-5'>
       <div className='flex items-center'>
@@ -13,10 +13,13 @@ const Stands = ({ image, number }) => {
         <img src={image} alt="" className='w-[84px]' />
       </div>
       <div className='mb-5'>
-        <h4 className='pb-3 text-bruning font-DMMono text-[18px] md:text-[22px]'>Salle d'exposition</h4>
-        {GameStand.map((item) => (
-          <GameStands key={item.id} {...item} />
-        ))}
+        <div className='w-full'>
+          <h4 className='pb-3 text-bruning font-DMMono text-[18px] md:text-[22px]'>{name}</h4>
+          <p className='font-DMMono text-white text-[14px] md:text-[15px] font-extralight w-full '>
+            {about}
+          </p>
+          <div className='w-full h-[1px] mt-5 bg-raven'></div>
+        </div>
       </div>
     </div>
   );

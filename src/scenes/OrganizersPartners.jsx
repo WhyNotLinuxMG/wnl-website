@@ -26,7 +26,7 @@ function OrganizersPartners() {
       {/*PARTENAIRES*/}
       <div className="mx-auto">
         <Title>
-          Nos <span className="text-yellow">Partenaires</span>{" "}
+          Nos <span className="text-yellow">Sponsors</span>{" "}
         </Title>
         <Associates>
           {partners &&

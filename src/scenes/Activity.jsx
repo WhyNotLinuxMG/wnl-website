@@ -7,7 +7,7 @@ function Activity() {
         <div className='flex flex-col items-center justify-center '>
           <h2 className='font-kontes uppercase text-white text-center text-[38px] md:text-[58px] '>type <br /> <span className='text-yellow'>d’activité</span></h2> 
           <div>
-            <ButtonFill content="22 juin 2024"/>
+            <ButtonFill content="20 Juillet 2024"/>
           </div>
         </div>
         <div className='flex items-center justify-center text-center '>
