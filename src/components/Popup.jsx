@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { QRCode } from "react-qrcode-logo";
 import QRCodeComponent from "./qrcode";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Error from "./Error";
 const Popup = () => {
   const [close, setClose] = useState(false);
@@ -14,6 +14,7 @@ const Popup = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submition, setSubmition] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [showQRCode, setShowQRCode] = useState(false);
   const qrRef = useRef();
 
