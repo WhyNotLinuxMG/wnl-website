@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { QRCode } from "react-qrcode-logo";
 import QRCodeComponent from "./qrcode";
 import { useRef, useState } from "react";
-import Error from "./Error";
+// import Error from "./Error";
 const Popup = () => {
   const [close, setClose] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
