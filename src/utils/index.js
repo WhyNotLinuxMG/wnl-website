@@ -1,17 +1,24 @@
-import Conf1 from "../assets/images/conf1.png";
-import Conf2 from "../assets/images/conf2.png";
-import Conf3 from "../assets/images/conf3.png";
-import Conf4 from "../assets/images/conf4.png";
-import Conf5 from "../assets/images/conf5.png";
-import Conf6 from "../assets/images/conf6.png";
-import Conf7 from "../assets/images/conf7.png";
-import Conf8 from "../assets/images/conf8.png";
+import Conf1 from "../assets/images/conference/unknonwn.png";
+import Conf2 from "../assets/images/conference/natoandro.png";
+import Conf3 from "../assets/images/conference/unknonwn.png";
+import Conf4 from "../assets/images/conference/unknonwn.png";
+import Conf5 from "../assets/images/conference/unknonwn.png";
+import Conf6 from "../assets/images/conference/unknonwn.png";
+import Conf7 from "../assets/images/conference/unknonwn.png";
+import Conf8 from "../assets/images/conference/unknonwn.png";
+import Conf9 from "../assets/images/conference/unknonwn.png";
+import Conf10 from "../assets/images/conference/unknonwn.png";
+import Conf11 from "../assets/images/conference/unknonwn.png";
+import Conf12 from "../assets/images/conference/unknonwn.png";
+import Conf13 from "../assets/images/conference/unknonwn.png";
+import Conf14 from "../assets/images/conference/unknonwn.png";
 
 import Exponent from "../assets/images/logoExponent.png";
 import FullDigits from "../assets/images/logoFullDigits.png";
 import ComputeStore from "../assets/images/logoComputeStore.png";
 import YouthComputing from "../assets/images/logoYouthComputing.png";
 import CPay from "../assets/images/logocpay.png";
+
 import MobLine from "../assets/images/mobileLine.png";
 import Retour1 from "../assets/images/retour-1.png";
 import Retour2 from "../assets/images/retour-2.png";
@@ -20,92 +27,99 @@ export const conferenceImage = [
   {
     id: 1,
     image: Conf1,
-    content: "Linux as a Tool for Global Education",
-    hours: "9h-9h45",
+    content: "Le processus du DevOps avec du Load-Balancing",
+    hours: " Mamitiana R | ??-??",
     place: "Antananarivo",
   },
   {
     id: 2,
     image: Conf2,
-    content: "Women in Linux",
-    hours: "9h50-10h35",
+    content: "WebAssembly et des composants backend open source avec Métatype.",
+    hours: "Natoandro | ??-??",
     place: "Antananarivo",
   },
   {
     id: 3,
     image: Conf3,
     content: "Open-Source Software in Government",
-    hours: "10h40-11h25",
+    hours: " Natoandro | ??-??",
     place: "Antananarivo",
   },
   {
     id: 4,
     image: Conf4,
     content: "Linux for Entrepreneurs",
-    hours: "11h30-12h15",
+    hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 5,
     image: Conf5,
     content: "Privacy and Security in the Open Source World",
-    hours: "13h-13h45",
+    hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 6,
     image: Conf6,
     content: "Linux in the Arts",
-    hours: "13h50-14h35",
+    hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 7,
     image: Conf7,
     content: "From Zero to Hero",
-    hours: "14h40-15h25",
+    hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 8,
     image: Conf8,
     content: "Community Building with Linux",
-    hours: "15h30-16h15",
+    hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 9,
-    image: Conf8,
+    image: Conf9,
     content: "Community Building with Linux",
-    hours: "15h30-16h15",
+    hours: "??-??",
     place: "Fianarantsoa",
   },
   {
     id: 10,
-    image: Conf8,
+    image: Conf10,
     content: "Community Building with Linux",
-    hours: "15h30-16h15",
+    hours: "??-??",
     place: "Fianarantsoa",
   },
   {
     id: 11,
-    image: Conf8,
+    image: Conf11,
     content: "Community Building with Linux",
-    hours: "15h30-16h15",
+    hours: "??-??",
     place: "Fianarantsoa",
   },
   {
     id: 12,
-    image: Conf8,
+    image: Conf12,
     content: "Community Building with Linux",
-    hours: "15h30-16h15",
+    hours: "??-??",
     place: "Fianarantsoa",
   },
   {
     id: 13,
-    image: Conf8,
+    image: Conf13,
     content: "Community Building with Linux",
-    hours: "15h30-16h15",
+    hours: "??-??",
+    place: "Fianarantsoa",
+  },
+  {
+    id: 14,
+    image: Conf14,
+    content: "Community Building with Linux",
+    hours: "??-??",
     place: "Fianarantsoa",
   },
 ];
@@ -195,7 +209,7 @@ export const comptetionList = [
 ];
 export const PlaceButton = [
   { id: 1, place: "Antananarivo", campus: "Campus sesame | Ambatoroka" },
-  { id: 2, place: "Fianarantsoa", campus: "Emit Andrainjato" },
+  { id: 2, place: "Fianarantsoa", campus: "Pôle Recherche | Andrianjato" },
 ];
 
 export const GameStand = [
