@@ -1,0 +1,30 @@
+name: CD Publish
+on:
+  release:
+    types:
+      - created
+  push:
+    branches: ["main"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: SSH and deploy on docker
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          DEPLOY_DIR: ${{ secrets.DEPLOY_DIR }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd $DEPLOY_DIR
+            git pull
+            docker build -t wnl .
+            docker rm -f whynotlinux
+            docker run -d -p 3000:80 --name whynotlinux wnl
