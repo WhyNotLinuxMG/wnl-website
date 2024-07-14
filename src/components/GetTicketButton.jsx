@@ -9,7 +9,7 @@ function GetTicketButton({ setIsPop, isPop }) {
       aria-label="Get a ticket"
       onClick={() => setIsPop(!isPop)}
     >
-      <span className="text-sm md:text-xl mb-0">Obtenir un billet</span>
+      <span className="text-sm md:text-xl mb-0">S'inscrire</span>
       <svg
         className="ml-2 inline-block"
         width="24"
