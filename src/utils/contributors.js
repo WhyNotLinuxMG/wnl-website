@@ -9,7 +9,7 @@ import Damia from "../assets/images/contributeurs/damia.jpg";
 import Aina from "../assets/images/contributeurs/ainaMc.jpg";
 import Arleme from "../assets/images/contributeurs/arleme.jpeg";
 import NyFanasina from "../assets/images/contributeurs/nyfanasina.jpeg";
-
+import Manuella from "../assets/images/contributeurs/manuellafanii.jpeg"
 export const contributors = [
   {
     nom: "Arlème Johnson",
@@ -66,5 +66,10 @@ export const contributors = [
     nom: "Ny Fanasina",
     fonction: "Développeur",
     image: NyFanasina,
+  },
+  {
+    nom: "Manuella",
+    fonction: "Développeur",
+    image: Manuella,
   },
 ];

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { QRCode } from "react-qrcode-logo";
 import QRCodeComponent from "./qrcode";
 import { useRef, useState } from "react";
-import Error from "./Error";
+// import Error from "./Error";
 const Popup = () => {
   const [close, setClose] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
@@ -109,14 +109,14 @@ const Popup = () => {
           ) : ( 
           
           <div>
-            <h4 className="font-DMMono text-white text-[16px] md:text-[20px] text-center ">
+            <h4 className="font-DMMono text-white text-[16px] mb-2 md:text-[20px] text-center ">
               WNL 20 S'inscrire
             </h4>
-            <h2 className="text-white font-kontes text-center mt-3 mb-2 md:mt-3 text-[32px] md:text-[58px]">
+            <h2 className="text-white font-kontes text-center mt-1 mb-2 md:mt-1 text-[32px] md:text-[58px]">
               Inscrivez- <span className="text-yellow">vous</span>
             </h2>
             <form onSubmit={handleSubmit}>
-              <div className="mb-3">
+              <div className="mb-1">
                 <div className="flex items-center">
                   <svg
                     width="18"
@@ -159,7 +159,7 @@ const Popup = () => {
                 />
               </div>
 
-              <div className="mb-3">
+              <div className="mb-2">
                 <div className="flex items-center">
                   <svg
                     width="18"
@@ -193,7 +193,7 @@ const Popup = () => {
                 />
               </div>
 
-              <div className="mb-3">
+              <div className="mb-2">
                 <div className="flex items-center">
                   <svg
                     width="18"
@@ -250,7 +250,7 @@ const Popup = () => {
                 </div>
               </div>
 
-              <div className="mb-3">
+              <div className="mb-2">
                 <div className="flex items-center">
                   <svg
                     width="18"
@@ -284,7 +284,7 @@ const Popup = () => {
                   </label>
                 </div>
 
-                <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
                   <div
                     className={`border ${
                       isChecked ? "border-yellow" : "border-raven"
