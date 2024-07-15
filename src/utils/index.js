@@ -156,8 +156,8 @@ export const stand = [
   {
     id: 5,
     number: "05",
-    name: "C-Pay",
-    about: "C-Pay For Madagascar est une entreprise spécialisée dals les paiements en ligne.",
+    name: "CPAY COMPANY FOR MADAGASCAR",
+    about: "CPay Company for Madagascar est un pôle de développement innovant spécialisé dans les cryptomonnaies et les paiements en ligne. Notre entreprise se consacre à fournir des solutions de paiement sécurisées et efficaces adaptées aux besoins du marché malgache. Notre mission est de rendre les paiements en ligne accessibles à tous, en garantissant rapidité, sécurité et fiabilité dans chaque transaction.",
     image: CPay,
   },
 ];
