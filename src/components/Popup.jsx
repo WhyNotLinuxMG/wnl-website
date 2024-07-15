@@ -120,9 +120,6 @@ const Popup = () => {
               <h2 className="text-white font-kontes text-center mt-1 mb-2 md:mt-1 text-[32px] md:text-[58px]">
                 Inscrivez- <span className="text-yellow">vous</span>
               </h2>
-              <h6 className="font-DMMono text-white text-[14px] md:text-18px] text-center ">
-                Inscrivez-vous si vous venez à l'événement, et à la fin, nous ferons un tirage au sort pour offrir un <b>T-shirt WNL2.0</b> au gagnant ! 🎉👕
-              </h6>
               <br />
               <form onSubmit={handleSubmit}>
                 <div className="mb-1">
