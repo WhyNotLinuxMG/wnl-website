@@ -1,11 +1,22 @@
-import QR from "../assets/images/qr_code.png";
-import ButtonFill from "../components/ButtonFill";
-import Button from "../components/Button";
-import GetTicketButton from "../components/GetTicketButton";
 import { useEffect, useState } from "react";
+import QR from "../assets/images/qr_code.png";
+import Button from "../components/Button";
+import ButtonFill from "../components/ButtonFill";
+import GetTicketButton from "../components/GetTicketButton";
+import SponsorPopup from "../components/SponsorPopup";
 
 const Hero = ({ setIsPop, isPop }) => {
   const [isAnimating, setIsAnimating] = useState(false);
+
+  const [isSponsorOpen, setIsSponsorOpen] = useState(false);
+
+  const openSponsorOpen = () => {
+    setIsSponsorOpen(true);
+  };
+
+  const closeSponsorOpen = () => {
+    setIsSponsorOpen(false);
+  };
 
   useEffect(() => {
     // Lancer l'animation après que le composant est monté
@@ -41,10 +52,11 @@ const Hero = ({ setIsPop, isPop }) => {
             </p>
             <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
               <GetTicketButton setIsPop={setIsPop} isPop={isPop} />
-              <Button content="Devenir sponsor" />
+              <div onClick={() => openSponsorOpen()}>
+                <Button content="Devenir sponsor" />
+              </div>
             </div>
           </div>
-
           <div className="hidden lg:mt-0 lg:col-span-5 lg:inline-flex items-end justify-end ">
             <img
               src={QR}
@@ -54,8 +66,9 @@ const Hero = ({ setIsPop, isPop }) => {
             />
           </div>
         </div>
+       
       </div>
-
+      <SponsorPopup isOpen={isSponsorOpen} onClose={closeSponsorOpen} />
       <div className="max-w-7xl mx-12 md:hidden">
         <div className="pt-28 flex flex-col md:items-end md:justify-between">
           {/* for mobile device  */}
@@ -73,7 +86,9 @@ const Hero = ({ setIsPop, isPop }) => {
               </p>
               <div className="mt-3 flex flex-col justify-center items-center  space-y-2 md:items-start md:justify-start md:flex-row md:space-y-0 md:space-x-3 mb-5">
                 <GetTicketButton setIsPop={setIsPop} isPop={isPop} />
-                <Button content="Devenir sponsor" />
+                <div onClick={() => openSponsorOpen()}>
+                  <Button content="Devenir sponsor" />
+                </div>
               </div>
             </div>
           </div>
