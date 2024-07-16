@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { QRCode } from "react-qrcode-logo";
 import QRCodeComponent from "./qrcode";
+import createAttendee from "../query/attendees";
 import { useRef, useState } from "react";
 // import Error from "./Error";
 const Popup = () => {
@@ -16,6 +17,7 @@ const Popup = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showQRCode, setShowQRCode] = useState(false);
+  const [qrValue, setQrValue] = useState(null);
   const qrRef = useRef();
 
   const handleClose = () => {
@@ -26,20 +28,28 @@ const Popup = () => {
     e.preventDefault();
     if (name && ville && attend && mail) {
       const data = { mail, ville, attend, name };
-      console.log(data);
-      setFormSubmitted(true);
-      setShowQRCode(true);
+      setIsLoading(true);
+      const response = await createAttendee(data);
+      setIsLoading(false);
+      if (response) {
+        setQrValue(response.id);
+        setFormSubmitted(true);
+        setShowQRCode(true);
+        setSubmition(data);
+      } else {
+        setError("Mail déjà inscrite ou Une erreur s'est produite. Réessayer");
+      }
     } else {
       setError("Merci de bien vouloir remplir le formulaire");
     }
   };
 
   const handleDownload = () => {
-    const canvas = qrRef.current.querySelector('canvas');
+    const canvas = qrRef.current.querySelector("canvas");
     if (canvas) {
-      const link = document.createElement('a');
-      link.href = canvas.toDataURL('image/png');
-      link.download = 'qrcode.png';
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = "qrcode.png";
       link.click();
     }
   };
@@ -89,7 +99,6 @@ const Popup = () => {
                 />
               </svg>
             </button>
-
           </div>
           {formSubmitted ? (
             <div className="flex flex-col items-center mt-4">
@@ -97,7 +106,7 @@ const Popup = () => {
                 Télécharger votre <span className="text-yellow">QR Code</span>
               </h2>
               <div ref={qrRef}>
-                <QRCodeComponent value="id" />
+                <QRCodeComponent value={qrValue} />
               </div>
               <button
                 onClick={handleDownload}
@@ -105,14 +114,13 @@ const Popup = () => {
               >
                 Télécharger
               </button>
-              <br/>
+              <br />
               <h4 className="font-DMMono text-white text-[16px] md:text-[20px] text-center ">
-               Rendez-vous le <span className="text-yellow">Samedi 20 Juillet </span> Alors !
+                Rendez-vous le{" "}
+                <span className="text-yellow">Samedi 20 Juillet </span> Alors !
               </h4>
-
             </div>
           ) : (
-
             <div>
               <h4 className="font-DMMono text-white text-[16px] mb-2 md:text-[20px] text-center ">
                 WNL 2.0 - 20 Juillet 2024
@@ -146,10 +154,7 @@ const Popup = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    <label
-                      className="text-white  font-DMMono pl-3"
-                      htmlFor=""
-                    >
+                    <label className="text-white  font-DMMono pl-3" htmlFor="">
                       {" "}
                       E-mail{" "}
                     </label>
@@ -180,10 +185,7 @@ const Popup = () => {
                       />
                     </svg>
 
-                    <label
-                      className="text-white  font-DMMono pl-3"
-                      htmlFor=""
-                    >
+                    <label className="text-white  font-DMMono pl-3" htmlFor="">
                       {" "}
                       Nom complet{" "}
                     </label>
@@ -214,18 +216,16 @@ const Popup = () => {
                         strokeWidth="1.125"
                       />
                     </svg>
-                    <label
-                      className="text-white  font-DMMono pl-3"
-                      htmlFor=""
-                    >
+                    <label className="text-white  font-DMMono pl-3" htmlFor="">
                       {" "}
                       ville
                     </label>
                   </div>
                   <div className="mt-2 flex ">
                     <div
-                      className={`flex items-center border ${isChecked ? " border-yellow" : "border-raven"
-                        } bg-ebony w-1/2 h-[50px] mt-2 rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white mr-2`}
+                      className={`flex items-center border ${
+                        isChecked ? " border-yellow" : "border-raven"
+                      } bg-ebony w-1/2 h-[50px] mt-2 rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white mr-2`}
                     >
                       <input
                         onChange={() => setVille("antananarivo")}
@@ -280,10 +280,7 @@ const Popup = () => {
                       />
                     </svg>
 
-                    <label
-                      className="text-white  font-DMMono pl-3"
-                      htmlFor=""
-                    >
+                    <label className="text-white  font-DMMono pl-3" htmlFor="">
                       {" "}
                       Votre attente
                     </label>
@@ -291,9 +288,11 @@ const Popup = () => {
 
                   <div className="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div
-                      className={`border ${isChecked ? "border-yellow" : "border-raven"
-                        } ${error ? "border-red-900" : "border-raven"
-                        } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
+                      className={`border ${
+                        isChecked ? "border-yellow" : "border-raven"
+                      } ${
+                        error ? "border-red-900" : "border-raven"
+                      } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                     >
                       <input
                         onChange={() => setAttente("réseautage")}
@@ -301,8 +300,9 @@ const Popup = () => {
                         type="radio"
                         name="reseautage"
                         id="reseautage"
-                        className={`${isChecked ? "border-yellow" : "border-raven"
-                          } mr-2`}
+                        className={`${
+                          isChecked ? "border-yellow" : "border-raven"
+                        } mr-2`}
                       />
                       <label className="text-white " htmlFor="option1">
                         Le réseautage
@@ -310,8 +310,9 @@ const Popup = () => {
                     </div>
 
                     <div
-                      className={`border ${isChecked ? "border-yellow" : "border-raven"
-                        } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
+                      className={`border ${
+                        isChecked ? "border-yellow" : "border-raven"
+                      } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                     >
                       <input
                         onChange={() => setAttente("conférence")}
@@ -327,8 +328,9 @@ const Popup = () => {
                     </div>
 
                     <div
-                      className={`border ${isChecked ? "border-yellow" : "border-raven"
-                        } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
+                      className={`border ${
+                        isChecked ? "border-yellow" : "border-raven"
+                      } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                     >
                       <input
                         onChange={() => setAttente("compétition")}
@@ -336,8 +338,9 @@ const Popup = () => {
                         type="radio"
                         name="competition"
                         id="competition"
-                        className={`${isChecked ? "border-yellow" : "border-raven"
-                          } mr-2`}
+                        className={`${
+                          isChecked ? "border-yellow" : "border-raven"
+                        } mr-2`}
                       />
                       <label className="text-white " htmlFor="option3">
                         La compétition
@@ -345,8 +348,9 @@ const Popup = () => {
                     </div>
 
                     <div
-                      className={`md:col-span-3 border ${isChecked ? "border-yellow" : "border-raven"
-                        } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
+                      className={`md:col-span-3 border ${
+                        isChecked ? "border-yellow" : "border-raven"
+                      } bg-ebony w-full h-[50px] rounded-md pl-3 focus:border-none placeholder:font-DMMono text-white flex items-center`}
                     >
                       <input
                         onChange={() => setAttente("autre")}
@@ -354,8 +358,9 @@ const Popup = () => {
                         type="radio"
                         name="autre"
                         id="autre"
-                        className={`${isChecked ? "border-yellow" : "border-raven"
-                          } mr-2`}
+                        className={`${
+                          isChecked ? "border-yellow" : "border-raven"
+                        } mr-2`}
                       />
                       <label className="text-white " htmlFor="option4">
                         Autre
@@ -373,8 +378,14 @@ const Popup = () => {
                   </button>
                 </div>
 
-                {submition && <div className="text-green-500 mt-2 text-center">{submition}</div>}
-                {error && <div className="text-red-500 mt-2 text-center">{error}</div>}
+                {submition && (
+                  <div className="text-green-500 mt-2 text-center">
+                    {submition}
+                  </div>
+                )}
+                {error && (
+                  <div className="text-red-500 mt-2 text-center">{error}</div>
+                )}
               </form>
             </div>
           )}
