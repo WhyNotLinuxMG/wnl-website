@@ -1,7 +1,5 @@
 name: Build and Deploy in Dev Mode
 
-on:
-
 jobs:
   # Build Job
   build:
