@@ -1,8 +1,6 @@
 name: Build and Deploy in Dev Mode
 
 on:
-  push:
-    branches: [ "main"]
 
 jobs:
   # Build Job
