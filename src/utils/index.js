@@ -1,11 +1,9 @@
 import Conf1 from "../assets/images/conference/unknonwn.png";
-import Conf2 from "../assets/images/conference/natoandro.png";
+import Conf2 from "../assets/images/conference/unknonwn.png";
 import Conf3 from "../assets/images/conference/unknonwn.png";
 import Conf4 from "../assets/images/conference/unknonwn.png";
 import Conf5 from "../assets/images/conference/unknonwn.png";
 import Conf6 from "../assets/images/conference/unknonwn.png";
-import Conf7 from "../assets/images/conference/unknonwn.png";
-import Conf8 from "../assets/images/conference/unknonwn.png";
 import Conf9 from "../assets/images/conference/unknonwn.png";
 import Conf10 from "../assets/images/conference/unknonwn.png";
 import Conf11 from "../assets/images/conference/unknonwn.png";
@@ -28,83 +26,69 @@ export const conferenceImage = [
     id: 1,
     image: Conf1,
     content: "Le processus du DevOps avec du Load-Balancing",
-    hours: " Mamitiana R | ??-??",
+    hours: " ?? | ??-??",
     place: "Antananarivo",
   },
   {
     id: 2,
     image: Conf2,
     content: "WebAssembly et des composants backend open source avec Métatype.",
-    hours: "Natoandro | ??-??",
+    hours: "?? | ??-??",
     place: "Antananarivo",
   },
   {
     id: 3,
     image: Conf3,
-    content: "Open-Source Software in Government",
-    hours: " Natoandro | ??-??",
+    content: "L'avenir de l'IA dans le monde de l'open source",
+    hours: " ?? | ??-??",
     place: "Antananarivo",
   },
   {
     id: 4,
     image: Conf4,
-    content: "Linux for Entrepreneurs",
+    content: "Women on Linux",
     hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 5,
     image: Conf5,
-    content: "Privacy and Security in the Open Source World",
+    content: "Linux : From Zero to Hero",
     hours: "??-??",
     place: "Antananarivo",
   },
   {
     id: 6,
     image: Conf6,
-    content: "Linux in the Arts",
-    hours: "??-??",
-    place: "Antananarivo",
-  },
-  {
-    id: 7,
-    image: Conf7,
-    content: "From Zero to Hero",
-    hours: "??-??",
-    place: "Antananarivo",
-  },
-  {
-    id: 8,
-    image: Conf8,
-    content: "Community Building with Linux",
-    hours: "??-??",
+    content: "Comment Linux peut transformer l'éducation dans les pays en développement et au-delà?",
+    hours: "?? | ??-??",
     place: "Antananarivo",
   },
   {
     id: 9,
     image: Conf9,
-    content: "Community Building with Linux",
-    hours: "??-??",
+    content: "Enhancing Security Through Understanding and Mitigating CVE",
+    hours: "?? | ??-??",
     place: "Fianarantsoa",
   },
   {
     id: 10,
     image: Conf10,
-    content: "Community Building with Linux",
-    hours: "??-??",
+    content: "Adoption de linux dans le système embarqué",
+    hours: "?? | ??-??",
     place: "Fianarantsoa",
   },
   {
     id: 11,
     image: Conf11,
-    content: "Community Building with Linux",
-    hours: "??-??",
+    content: "Ultimate customisation",
+    hours: "?? | ??-??",
     place: "Fianarantsoa",
   },
   {
     id: 12,
     image: Conf12,
-    content: "Community Building with Linux",
+    content: "Developing Open Source Extensions",
     hours: "??-??",
     place: "Fianarantsoa",
   },
