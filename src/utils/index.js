@@ -1,15 +1,13 @@
-import Conf1 from "../assets/images/conference/unknonwn.png";
-import Conf2 from "../assets/images/conference/unknonwn.png";
-import Conf3 from "../assets/images/conference/unknonwn.png";
-import Conf4 from "../assets/images/conference/unknonwn.png";
-import Conf5 from "../assets/images/conference/unknonwn.png";
-import Conf6 from "../assets/images/conference/unknonwn.png";
-import Conf9 from "../assets/images/conference/unknonwn.png";
-import Conf10 from "../assets/images/conference/unknonwn.png";
-import Conf11 from "../assets/images/conference/unknonwn.png";
-import Conf12 from "../assets/images/conference/unknonwn.png";
-import Conf13 from "../assets/images/conference/unknonwn.png";
-import Conf14 from "../assets/images/conference/unknonwn.png";
+import Conf1 from "../assets/images/conference/default.png";
+import Conf2 from "../assets/images/conference/default.png";
+import Conf3 from "../assets/images/conference/default.png";
+import Conf4 from "../assets/images/conference/default.png";
+import Conf5 from "../assets/images/conference/default.png";
+import Conf6 from "../assets/images/conference/default.png";
+import Conf9 from "../assets/images/conference/default.png";
+import Conf10 from "../assets/images/conference/default.png";
+import Conf12 from "../assets/images/conference/default.png";
+import Conf13 from "../assets/images/conference/default.png";
 
 import Exponent from "../assets/images/logoExponent.png";
 import FullDigits from "../assets/images/logoFullDigits.png";
@@ -25,85 +23,71 @@ export const conferenceImage = [
   {
     id: 1,
     image: Conf1,
-    content: "Le processus du DevOps avec du Load-Balancing",
-    hours: " ?? | ??-??",
+    content: "L’avenir de l’IA dans le monde de l’open source",
+    hours: " Arinoely  | 09H-09H45",
     place: "Antananarivo",
   },
   {
     id: 2,
     image: Conf2,
-    content: "WebAssembly et des composants backend open source avec Métatype.",
-    hours: "?? | ??-??",
+    content: "Le processus du DevOps avec du LoadBalancing",
+    hours: "Mamitiana | 10H-10H45",
     place: "Antananarivo",
   },
   {
     id: 3,
     image: Conf3,
-    content: "L'avenir de l'IA dans le monde de l'open source",
-    hours: " ?? | ??-??",
+    content: "Découverte du WebAssembly et des composants backend open source",
+    hours: " Natoandro | 11H-11H45",
     place: "Antananarivo",
   },
   {
     id: 4,
     image: Conf4,
-    content: "Women on Linux",
-    hours: "??-??",
+    content: "Women in IT : Fostering Diversity in Technology",
+    hours: "Ainah M | 13H-13H45",
     place: "Antananarivo",
   },
   {
     id: 5,
     image: Conf5,
-    content: "Linux : From Zero to Hero",
-    hours: "??-??",
+    content: "Comment Linux peut transformer l'éducation ",
+    hours: "Dimby | 14H-14H45",
     place: "Antananarivo",
   },
   {
     id: 6,
     image: Conf6,
-    content: "Comment Linux peut transformer l'éducation dans les pays en développement et au-delà?",
-    hours: "?? | ??-??",
+    content: "Linux de 0 à héro - Devenez le 'superuser'",
+    hours: "Antsa | 15H-15H45",
     place: "Antananarivo",
   },
   {
     id: 9,
     image: Conf9,
-    content: "Enhancing Security Through Understanding and Mitigating CVE",
-    hours: "?? | ??-??",
+    content: "Developing Open Source Extensions",
+    hours: "Gaetan J | 09- 09H55",
     place: "Fianarantsoa",
   },
   {
     id: 10,
     image: Conf10,
-    content: "Adoption de linux dans le système embarqué",
-    hours: "?? | ??-??",
-    place: "Fianarantsoa",
-  },
-  {
-    id: 11,
-    image: Conf11,
     content: "Ultimate customisation",
-    hours: "?? | ??-??",
+    hours: "Berthose |10h-10h55",
     place: "Fianarantsoa",
   },
   {
     id: 12,
     image: Conf12,
-    content: "Developing Open Source Extensions",
-    hours: "??-??",
+    content: "Enhancing Security Through Understanding and Mitigating CVE",
+    hours: "Gaëls | 14h-14h55",
     place: "Fianarantsoa",
   },
   {
     id: 13,
     image: Conf13,
-    content: "Community Building with Linux",
-    hours: "??-??",
-    place: "Fianarantsoa",
-  },
-  {
-    id: 14,
-    image: Conf14,
-    content: "Community Building with Linux",
-    hours: "??-??",
+    content: "Intégration de l'Intelligence Artificielle dans un éco-système embarqué",
+    hours: "Laydam | 15h-15h55",
     place: "Fianarantsoa",
   },
 ];
@@ -123,6 +107,7 @@ export const stand = [
     about: "FullDigits apporte son expertise aux startups, aux pure players et à l’ensemble des professionnels du digital. ",
     image: FullDigits,
   },
+
   {
     id: 3,
     number: "03",
@@ -141,7 +126,7 @@ export const stand = [
     id: 5,
     number: "05",
     name: "CPAY COMPANY FOR MADAGASCAR",
-    about: "CPay Company for Madagascar est un pôle de développement innovant spécialisé dans les cryptomonnaies et les paiements en ligne. Notre entreprise se consacre à fournir des solutions de paiement sécurisées et efficaces adaptées aux besoins du marché malgache. Notre mission est de rendre les paiements en ligne accessibles à tous, en garantissant rapidité, sécurité et fiabilité dans chaque transaction.",
+    about: "CPay Company for Madagascar est un pôle de développement innovant spécialisé dans les cryptomonnaies et les paiements en ligne. Notre entreprise se consacre à fournir des solutions de paiement sécurisées et efficaces adaptées aux besoins du marché malgache. ",
     image: CPay,
   },
 ];
